@@ -1,0 +1,273 @@
+2022-03-21T20:57:32.776+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|50|Logging initialized
+2022-03-21T20:57:32.781+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|51|hostname: VISION
+2022-03-21T20:57:32.783+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|52|ip: 192.168.56.1
+2022-03-21T20:57:32.783+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|53|user: Роман
+2022-03-21T20:57:32.783+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|54|pid: 5632
+2022-03-21T20:57:32.784+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|55|python: D:\gmsh_scripts\venv\Scripts\python.exe
+2022-03-21T20:57:32.784+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|56|script: D:\gmsh_scripts\gmsh_scripts\support\support.py
+2022-03-21T20:57:32.784+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|57|working directory: D:\gmsh_scripts\examples\tenex\container_simple\gmsh
+2022-03-21T20:57:32.791+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|78|Gmsh initialized
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|390|Gmsh options
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|General.Terminal: 0
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|General.AbortOnError: 0
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCParallel: 1
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.AutoCoherence: 1
+2022-03-21T20:57:32.792+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCAutoFix: 1
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCDisableStl: 0
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCBoundsUseStl: 0
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCBooleanPreserveNumbering: 1
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCThruSectionsDegree: -1
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCUnionUnify: 1
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Geometry.OCCUseGenericClosestPoint: 0
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Algorithm: 6
+2022-03-21T20:57:32.793+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Algorithm3D: 1
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.SubdivisionAlgorithm: 0
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.RecombinationAlgorithm: 1
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.RecombineAll: 0
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.RecombineOptimizeTopology: 5
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Recombine3DAll: 0
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Recombine3DLevel: 0
+2022-03-21T20:57:32.794+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Recombine3DConformity: 0
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.RefineSteps: 10
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Smoothing: 1
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.SmoothNormals: 0
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.SmoothCrossField: 0
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeFactor: 1
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeMin: 0
+2022-03-21T20:57:32.795+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeMax: 1e+22
+2022-03-21T20:57:32.796+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeFromPoints: 1
+2022-03-21T20:57:32.796+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeExtendFromBoundary: 1
+2022-03-21T20:57:32.796+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeFromCurvature: 12
+2022-03-21T20:57:32.796+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeFromCurvatureIsotropic: 0
+2022-03-21T20:57:32.796+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MeshSizeFromParametricPoints: 0
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MinimumCircleNodes: 7
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.MinimumCurveNodes: 3
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.Optimize: 0
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.OptimizeThreshold: 0.3
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|393|Mesh.OptimizeNetgen: 0
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|394|Gmsh options end
+2022-03-21T20:57:32.797+0300|VISION|192.168.56.1|Роман|5632|INFO|run.py|175|args: {'factory': 'occ', 'log_level': 'DEBUG', 'options': {'Mesh.Algorithm': 6, 'Mesh.Algorithm3D': 1, 'Mesh.MeshSizeFactor': 1, 'Mesh.MeshSizeMin': 0, 'Mesh.MeshSizeMax': 1e+22, 'Mesh.MeshSizeFromPoints': 1, 'Mesh.MeshSizeExtendFromBoundary': 1, 'Mesh.MeshSizeFromCurvature': 12}, 'data': {'class': 'block.Block', 'do_register': 0, 'children': ['/filling.json', '/cast_iron.json'], 'children_transforms': [[[0, 0, 0.235]], []]}, 'input_path': 'container.json', 'model_name': 'container', 'output_path': 'container', 'output_formats': ['geo_unrolled', 'msh2'], 'log_path': 'container.log', 'strategy': {'class': 'strategy.Base', 'factory': 'occ', 'model_name': 'container', 'output_path': 'container', 'output_formats': ['geo_unrolled', 'msh2']}}
+2022-03-21T20:57:32.809+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|31|factory: occ
+2022-03-21T20:57:32.810+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|32|model_name: container
+2022-03-21T20:57:32.810+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|33|output_path: container
+2022-03-21T20:57:32.810+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|34|output_formats: ['geo_unrolled', 'msh2']
+2022-03-21T20:57:32.810+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|38|number of blocks: 5
+2022-03-21T20:57:32.824+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.block.block.transform - 0.014s
+2022-03-21T20:57:35.515+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.block.block.register - 2.690s
+2022-03-21T20:57:35.515+0300|VISION|192.168.56.1|Роман|5632|INFO|boolean.py|32|n_volumes: 2
+2022-03-21T20:57:36.666+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh.fragment - 1.150s
+2022-03-21T20:57:36.666+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.boolean.boolean.BooleanAllBlock - 1.151s
+2022-03-21T20:57:36.718+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.registry.synchronize - 0.051s
+2022-03-21T20:57:36.733+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.structure.structure.StructureBlock - 0.014s
+2022-03-21T20:57:36.733+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.quadrate.quadrate.NoQuadrate - 0.000s
+2022-03-21T20:57:36.734+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.smooth.smooth.NoSmooth - 0.001s
+2022-03-21T20:57:36.735+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.size.size.NoSize - 0.000s
+2022-03-21T20:57:36.735+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.block.block.pre_unregister - 0.000s
+2022-03-21T20:57:36.770+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.zone.zone.DirectionByNormal - 0.035s
+2022-03-21T20:57:36.770+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.block.block.unregister - 0.000s
+2022-03-21T20:57:36.771+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|99|Writing container-boolean.geo_unrolled
+2022-03-21T20:57:36.773+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh.write - 0.002s
+2022-03-21T20:57:47.264+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh.generate - 10.491s
+2022-03-21T20:57:47.264+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.refine.refine.NoRefine - 0.000s
+2022-03-21T20:57:49.434+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh_scripts.optimize.optimize.OptimizeOne - 2.170s
+2022-03-21T20:57:49.434+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|538|Mesh statistics
+2022-03-21T20:57:49.533+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|563|2-node line: 768 
+2022-03-21T20:57:49.534+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|563|3-node triangle: 26718 
+2022-03-21T20:57:49.564+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|563|4-node tetrahedron: 170325 
+2022-03-21T20:57:50.008+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|563|1-node point: 20 
+2022-03-21T20:57:50.008+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|566|Total: 31247 nodes and 197831 elements
+2022-03-21T20:57:52.772+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|526|Mesh quality
+2022-03-21T20:57:52.774+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Writing 'container-boolean.geo_unrolled'...
+2022-03-21T20:57:52.774+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done writing 'container-boolean.geo_unrolled'
+2022-03-21T20:57:52.774+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing 1D...
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 1 (Circle)
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 2 (Circle)
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 3 (Circle)
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 4 (Circle)
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 5 (Circle)
+2022-03-21T20:57:52.775+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 6 (Circle)
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 7 (Circle)
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 8 (Circle)
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 9 (Line)
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 10 (Line)
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.776+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 11 (Line)
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 12 (Line)
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 13 (Line)
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 14 (Circle)
+2022-03-21T20:57:52.777+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 15 (Line)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 16 (Circle)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 17 (Circle)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 18 (Line)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 19 (Circle)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 20 (Circle)
+2022-03-21T20:57:52.778+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 21 (Circle)
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 22 (Line)
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 23 (Circle)
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing curve 24 (Circle)
+2022-03-21T20:57:52.779+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 1D...
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done meshing 1D (Wall 0.181011s, CPU 0.171601s)
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing 2D...
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 1 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 2 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 3 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.780+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 4 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 5 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 6 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 7 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.781+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 8 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 9 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 10 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 11 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.782+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing surface 12 (BSpline surface, Frontal-Delaunay)
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 2D...
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done meshing 2D (Wall 2.58215s, CPU 2.34001s)
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Meshing 3D...
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 3D...
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 3D Meshing 2 volumes with 1 connected component
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Tetrahedrizing 13363 nodes...
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done tetrahedrizing 13371 nodes (Wall 0.632036s, CPU 0.592804s)
+2022-03-21T20:57:52.783+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Reconstructing mesh...
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - Creating surface mesh
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - Identifying boundary edges
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - Recovering boundary
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done reconstructing mesh (Wall 1.55009s, CPU 1.37281s)
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Found volume 1
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Found volume 2
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 0 - 0 nodes created - worst tet radius 12.4258 (nodes removed 0 0)
+2022-03-21T20:57:52.784+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 500 - 500 nodes created - worst tet radius 2.74732 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 1000 - 1000 nodes created - worst tet radius 2.22813 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 1500 - 1500 nodes created - worst tet radius 1.99076 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 2000 - 2000 nodes created - worst tet radius 1.81599 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 2500 - 2500 nodes created - worst tet radius 1.6956 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 3000 - 3000 nodes created - worst tet radius 1.60828 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 3500 - 3500 nodes created - worst tet radius 1.53483 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 4000 - 4000 nodes created - worst tet radius 1.47196 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 4500 - 4500 nodes created - worst tet radius 1.42336 (nodes removed 0 0)
+2022-03-21T20:57:52.785+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 5000 - 5000 nodes created - worst tet radius 1.37837 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 5500 - 5500 nodes created - worst tet radius 1.34401 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 6000 - 6000 nodes created - worst tet radius 1.32085 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 6500 - 6500 nodes created - worst tet radius 1.30708 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 7000 - 7000 nodes created - worst tet radius 1.29719 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 7500 - 7500 nodes created - worst tet radius 1.28567 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 8000 - 8000 nodes created - worst tet radius 1.26954 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 8500 - 8500 nodes created - worst tet radius 1.2538 (nodes removed 0 0)
+2022-03-21T20:57:52.786+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 9000 - 9000 nodes created - worst tet radius 1.23688 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 9500 - 9500 nodes created - worst tet radius 1.2191 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 10000 - 10000 nodes created - worst tet radius 1.20178 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 10500 - 10500 nodes created - worst tet radius 1.18332 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 11000 - 11000 nodes created - worst tet radius 1.16586 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 11500 - 11500 nodes created - worst tet radius 1.1488 (nodes removed 0 0)
+2022-03-21T20:57:52.787+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 12000 - 12000 nodes created - worst tet radius 1.13249 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 12500 - 12500 nodes created - worst tet radius 1.11694 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 13000 - 13000 nodes created - worst tet radius 1.10269 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 13500 - 13500 nodes created - worst tet radius 1.09041 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 14000 - 14000 nodes created - worst tet radius 1.07736 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 14500 - 14500 nodes created - worst tet radius 1.06721 (nodes removed 0 0)
+2022-03-21T20:57:52.788+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 15000 - 15000 nodes created - worst tet radius 1.05645 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 15500 - 15500 nodes created - worst tet radius 1.04651 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 16000 - 16000 nodes created - worst tet radius 1.03604 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 16500 - 16500 nodes created - worst tet radius 1.02589 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 17000 - 17000 nodes created - worst tet radius 1.01598 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: It. 17500 - 17500 nodes created - worst tet radius 1.00669 (nodes removed 0 0)
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 3D refinement terminated (31243 nodes total):
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - 0 Delaunay cavities modified for star shapeness
+2022-03-21T20:57:52.789+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - 0 nodes could not be inserted
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info:  - 173340 tetrahedra created in 3.85222 sec. (44997 tets/s)
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: Meshing 3D...
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done meshing 3D (Wall 7.51343s, CPU 7.06685s)
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 31247 nodes 200846 elements
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Optimizing mesh...
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Optimizing volume 1
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Optimization starts (volume = 23.3761) with worst = 0.00397603 / average = 0.77935:
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.00 < quality < 0.10 :       231 elements
+2022-03-21T20:57:52.790+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.10 < quality < 0.20 :       691 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.20 < quality < 0.30 :      1183 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.30 < quality < 0.40 :      1932 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.40 < quality < 0.50 :      2978 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.50 < quality < 0.60 :      4991 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.60 < quality < 0.70 :     10368 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.70 < quality < 0.80 :     23980 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.80 < quality < 0.90 :     39920 elements
+2022-03-21T20:57:52.791+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.90 < quality < 1.00 :     19969 elements
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 2074 edge swaps, 57 node relocations (volume = 23.3761): worst = 0.182998 / average = 0.79173 (Wall 0.529031s, CPU 0.234002s)
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 2089 edge swaps, 57 node relocations (volume = 23.3761): worst = 0.22911 / average = 0.791821 (Wall 0.597035s, CPU 0.296402s)
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: No ill-shaped tets in the mesh :-)
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.00 < quality < 0.10 :         0 elements
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.10 < quality < 0.20 :         0 elements
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.20 < quality < 0.30 :         1 elements
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.30 < quality < 0.40 :      1896 elements
+2022-03-21T20:57:52.792+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.40 < quality < 0.50 :      2861 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.50 < quality < 0.60 :      4851 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.60 < quality < 0.70 :     10313 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.70 < quality < 0.80 :     24329 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.80 < quality < 0.90 :     40246 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.90 < quality < 1.00 :     19868 elements
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Optimizing volume 2
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Optimization starts (volume = 13.038) with worst = 0.00845489 / average = 0.776241:
+2022-03-21T20:57:52.793+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.00 < quality < 0.10 :       155 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.10 < quality < 0.20 :       368 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.20 < quality < 0.30 :       700 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.30 < quality < 0.40 :       889 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.40 < quality < 0.50 :      1745 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.50 < quality < 0.60 :      2623 elements
+2022-03-21T20:57:52.794+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.60 < quality < 0.70 :      5847 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.70 < quality < 0.80 :     20635 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.80 < quality < 0.90 :     24289 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.90 < quality < 1.00 :      9846 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 1210 edge swaps, 37 node relocations (volume = 13.038): worst = 0.182506 / average = 0.788305 (Wall 0.278016s, CPU 0.124801s)
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 1213 edge swaps, 39 node relocations (volume = 13.038): worst = 0.197496 / average = 0.78834 (Wall 0.321018s, CPU 0.156001s)
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: No ill-shaped tets in the mesh :-)
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.00 < quality < 0.10 :         0 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.10 < quality < 0.20 :         1 elements
+2022-03-21T20:57:52.795+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.20 < quality < 0.30 :         0 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.30 < quality < 0.40 :       889 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.40 < quality < 0.50 :      1695 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.50 < quality < 0.60 :      2508 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.60 < quality < 0.70 :      5548 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.70 < quality < 0.80 :     20841 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.80 < quality < 0.90 :     24705 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: 0.90 < quality < 1.00 :      9773 elements
+2022-03-21T20:57:52.796+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done optimizing mesh (Wall 2.08812s, CPU 1.21681s)
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Running Plugin(AnalyseMeshQuality)...
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Computing Jacobian for 3D elements...
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Volume 1: checking the Jacobian of 104365 elements
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: done
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Volume 2: checking the Jacobian of 65960 elements
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: done
+2022-03-21T20:57:52.797+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done computing Jacobian for 3D elements (Wall 0.622035s, CPU 0.546003s)
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Computing IGE for 3D elements...
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: done
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done computing IGE for 3D elements (Wall 1.23607s, CPU 1.01401s)
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Computing ICN for 3D elements...
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Progress: done
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done computing ICN for 3D elements (Wall 0.893051s, CPU 0.780005s)
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|532|Info: minJ      = 0.000284,  0.00128,  0.00401 (min, avg, max)
+2022-03-21T20:57:52.798+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|532|Info: minJ/maxJ =        1,        1,        1 (worst, avg, best)
+2022-03-21T20:57:52.799+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|532|Info: IGE       =    0.206,    0.838,        1 (worst, avg, best)
+2022-03-21T20:57:52.799+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|532|Info: ICN       =    0.305,    0.826,        1 (worst, avg, best)
+2022-03-21T20:57:52.799+0300|VISION|192.168.56.1|Роман|5632|DEBUG|support.py|534|Info: Done running Plugin(AnalyseMeshQuality)
+2022-03-21T20:57:52.799+0300|VISION|192.168.56.1|Роман|5632|INFO|strategy.py|109|Writing container.msh2
+2022-03-21T20:57:54.788+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|578|gmsh.write - 1.989s
+2022-03-21T20:57:55.103+0300|VISION|192.168.56.1|Роман|5632|INFO|support.py|81|Gmsh finalized

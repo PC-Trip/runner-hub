@@ -1,0 +1,17 @@
+{
+  "data": {"tag": "sub1s", "class": "Action", "sub_actions": [
+    {"tag": "1", "class": "Action"},
+    {"tag": "2p", "class": "Action", "executor": "ProcessPoolExecutor", "sub_actions": [
+      {"tag": "2p1", "class": "Action"},
+      {"tag": "2p2", "class": "Action"}]},
+    {"tag": "3", "class": "Action"},
+    {"tag": "4t", "class": "Action", "executor": "ThreadPoolExecutor", "sub_actions": [
+      {"tag": "1", "class": "Action"},
+      {"tag": "2t", "class": "Action", "executor": "ThreadPoolExecutor", "sub_actions": [
+        {"tag": "1", "class": "Action"},
+        {"tag": "2", "class": "Action"}]},
+      {"tag": "3", "class": "Action"},
+      {"tag": "4", "class": "Action"}]},
+    {"tag": "5", "class": "Action"}]
+  }
+}
