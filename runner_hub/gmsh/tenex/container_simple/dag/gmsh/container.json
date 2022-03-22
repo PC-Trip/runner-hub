@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "run": {
+      "factory": "occ",
+      "log_level": "DEBUG",
+      "options": {
+        "Mesh.Algorithm": 5,
+        "Mesh.Algorithm3D": 9,
+        "Mesh.MeshSizeFactor": 0.7691792024925214,
+        "Mesh.MeshSizeMin": 0.30548010263810743,
+        "Mesh.MeshSizeMax": 1.1289561506226673,
+        "Mesh.MeshSizeExtendFromBoundary": 1,
+        "Mesh.MeshSizeFromCurvature": 169.8358896164419
+      }
+    }
+  },
+  "data": {
+    "class": "block.Block",
+    "do_register": 0,
+    "children": [
+      "/filling.json",
+      "/cast_iron.json"
+    ],
+    "children_transforms": [
+      [
+        [
+          0,
+          0,
+          0.235
+        ]
+      ],
+      []
+    ]
+  }
+}

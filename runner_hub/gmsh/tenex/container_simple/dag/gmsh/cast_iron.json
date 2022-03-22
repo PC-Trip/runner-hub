@@ -1,0 +1,25 @@
+{
+  "data": {
+    "class": "block.Layer",
+    "layer": [
+      [
+        "1.450;0.4921416872848438"
+      ],
+      [
+        "5.500;0.4921416872848438"
+      ]
+    ],
+    "layer_curves": [
+      [
+        "circle_arc"
+      ],
+      [
+        "line"
+      ]
+    ],
+    "items_zone": [
+      "CastIron"
+    ],
+    "items_boolean_level_map": 0
+  }
+}

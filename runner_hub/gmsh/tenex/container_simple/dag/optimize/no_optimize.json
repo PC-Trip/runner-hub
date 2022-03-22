@@ -1,0 +1,21 @@
+{
+  "metadata": {},
+  "data": {
+    "class": "Optuna",
+    "n_trials": 1,
+    "work_path": "work",
+    "storage": "sqlite:///work.db",
+    "study": "container_simple",
+    "copies": ["gmsh"],
+    "do_optimize": false,
+    "do_sub_call": true,
+    "sub_actions": [
+      "/optimize/input.json",
+      "/optimize/run.json",
+      "/optimize/output.json"],
+    "objectives": {
+      "~~.gmsh.mesh.metric.ige.min": "maximize"},
+    "constraints": [
+      "~~.gmsh.mesh.jacobian.min.min.constraint"]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "comment_samplers": "https://optuna.readthedocs.io/en/stable/reference/samplers.html",
+    "comment_pruners": "https://optuna.readthedocs.io/en/stable/reference/pruners.html"
+  },
+  "data": {
+    "class": "Optuna",
+    "n_trials": 2,
+    "work_path": "work",
+    "storage": "sqlite:///work.db",
+    "study": "container_simple",
+    "copies": ["gmsh"],
+    "sampler": "TPESampler",
+    "sampler_kwargs": {
+      "consider_prior": true,
+      "prior_weight": 1.0,
+      "consider_magic_clip": true,
+      "consider_endpoints": false,
+      "n_startup_trials": 10,
+      "n_ei_candidates": 24,
+      "seed": null,
+      "multivariate": false,
+      "group": false,
+      "warn_independent_sampling": true,
+      "constant_liar": false},
+    "pruner": "MedianPruner",
+    "pruner_kwargs": {
+      "n_startup_trials": 5,
+      "n_warmup_steps": 0,
+      "interval_steps": 1,
+      "n_min_trials": 1},
+    "sub_actions": [
+      "/optimize/input.json",
+      "/optimize/run.json",
+      "/optimize/output.json"],
+    "objectives": {
+      "~~.gmsh.mesh.metric.ige.min": "maximize"},
+    "constraints": [
+      "~~.gmsh.mesh.jacobian.min.min.constraint"]
+  }
+}

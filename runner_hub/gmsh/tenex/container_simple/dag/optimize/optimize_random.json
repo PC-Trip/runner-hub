@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "comment_samplers": "https://optuna.readthedocs.io/en/stable/reference/samplers.html",
+    "comment_pruners": "https://optuna.readthedocs.io/en/stable/reference/pruners.html"
+  },
+  "data": {
+    "class": "Optuna",
+    "n_trials": 2,
+    "work_path": "work",
+    "storage": "sqlite:///work.db",
+    "study": "container_simple",
+    "copies": ["gmsh"],
+    "sampler": "RandomSampler",
+    "sampler_kwargs": {
+      "seed": null},
+    "pruner": "NopPruner",
+    "pruner_kwargs": {},
+    "sub_actions": [
+      "/optimize/input.json",
+      "/optimize/run.json",
+      "/optimize/output.json"],
+    "objectives": {
+      "~~.gmsh.mesh.metric.ige.min": "maximize"},
+    "constraints": [
+      "~~.gmsh.mesh.jacobian.min.min.constraint"]
+  }
+}
