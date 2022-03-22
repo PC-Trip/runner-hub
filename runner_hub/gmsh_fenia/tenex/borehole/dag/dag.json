@@ -1,0 +1,27 @@
+{
+  "metadata": {},
+  "data": {
+    "class": "Optuna",
+    "n_trials": 1,
+    "work_path": "work",
+    "storage": "sqlite:///example.db",
+    "study": "tenex_borehole",
+    "copies": ["gmsh", "fenia"],
+    "sampler": "NSGAIISampler",
+    "pruner": "MedianPruner",
+    "sub_actions": [
+      "/opt_gmsh/input.json",
+      "/opt_gmsh/run.json",
+      "/opt_gmsh/output.json"
+    ],
+    "objectives": {
+      "gmsh.result.elements": "minimize",
+      "gmsh.result.metric.ige.min": "maximize",
+      "fenia.result.heat.temperature.max": "minimize"
+    },
+    "constraints": [
+      "gmsh.parameter.geometry.borehole.constraint",
+      "gmsh.result.jacobian.min.min.constraint"
+    ]
+  }
+}

@@ -9,7 +9,6 @@
         "Mesh.MeshSizeFactor": 5,
         "Mesh.MeshSizeMin": 0,
         "Mesh.MeshSizeMax": 1e22,
-        "Mesh.MeshSizeFromPoints": 1,
         "Mesh.MeshSizeExtendFromBoundary": 1,
         "Mesh.MeshSizeFromCurvature": 100
       }
@@ -24,7 +23,7 @@
     "items_zone": ["Rock"],
     "items_boolean_level_map": -3,
     "items_do_register_map": 1,
-    "items_children": [["borehole.json"], []],
+    "items_children": [["/borehole.json"], []],
     "items_children_map": [
       [1, 0, 1]
     ],

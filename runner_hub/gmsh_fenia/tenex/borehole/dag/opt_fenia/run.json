@@ -1,7 +1,7 @@
 {
   "metadata": {},
   "data": {
-    "class": "action.run.Subprocess",
+    "class": "Subprocess",
     "subprocess_kwargs": {
       "args": ["linLMTerm"],
       "cwd": "fenia",

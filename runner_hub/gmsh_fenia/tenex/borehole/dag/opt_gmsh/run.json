@@ -1,0 +1,12 @@
+{
+  "metadata": {},
+  "data": {
+    "class": "Subprocess",
+    "subprocess_kwargs": {
+      "args": ["python", "-m", "gmsh_scripts", "boreholes.json", "-f", "msh2", "-o", "mesh", "-l", "gmsh.log", "-v", "DEBUG"],
+      "cwd": "gmsh",
+      "stdout": "gmsh/gmsh.out",
+      "stderr": "gmsh/gmsh.err"
+    }  
+  }
+}
