@@ -35,14 +35,13 @@
         {"class": "GetFileJson", "path": "gmsh/boreholes.json",
           "mapping": {"metadata": {"run": {"options": {"Mesh.MeshSizeExtendFromBoundary": "$.~~$"}}}}}]},
       {"class": "Feature", "key": "cast_iron", "sub_actions": [
-        {"class": "Continuous", "low": 0.1, "high": 0.5}]},
+        {"class": "Continuous", "low": 0.5, "high": 0.5}]},
       {"class": "Feature", "key": "filling", "sub_actions": [
-        {"class": "Continuous", "low": 0.1, "high": 0.5}]},
+        {"class": "Continuous", "low": 0.5, "high": 0.5}]},
       {"class": "Feature", "key": "ebs", "sub_actions": [
-        {"class": "Continuous", "low": 0.1, "high": 0.5}]},
+        {"class": "Continuous", "low": 0.5, "high": 0.5}]},
       {"class": "Feature", "key": "rock", "sub_actions": [
-        {"class": "Continuous", "low": 0.1, "high": 0.5}]}
-    ]},
+        {"class": "Continuous", "low": 0.5, "high": 0.5}]}]},
     {"class": "Action", "tag": "geometry", "sub_actions": [
       {"class": "Action", "tag": "filling", "sub_actions": [
         {"class": "Feature", "key": "height", "sub_actions": [
@@ -53,7 +52,9 @@
         {"class": "Feature", "key": "dh", "sub_actions": [
           {"class": "Continuous", "low": 0.235, "high": 0.235}]},
         {"class": "Feature", "key": "dr", "sub_actions": [
-          {"class": "Continuous", "low": 0.235, "high": 0.235}]}]},
+          {"class": "Continuous", "low": 0.235, "high": 0.235}]},
+        {"class": "Feature", "key": "transform", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.dh$"}]}]},
       {"class": "Action", "tag": "container", "sub_actions": [
         {"class": "Feature", "key": "number", "sub_actions": [
           {"class": "Discrete", "low": 8, "high": 8}]},
@@ -64,31 +65,83 @@
         {"class": "Feature", "key": "height", "sub_actions": [
           {"class": "Equation", "equation": "$...~~.filling.height$ + 2*$...~~.cast_iron.dh$"}]},
         {"class": "Feature", "key": "radius", "sub_actions": [
-          {"class": "Equation", "equation": "$...~~.filling.radius + 2*$...~~.cast_iron.dr$"}]}]},
+          {"class": "Equation", "equation": "$...~~.filling.radius$ + 2*$...~~.cast_iron.dr$"}]}]},
       {"class": "Action", "tag": "ebs", "sub_actions": [
         {"class": "Feature", "key": "dh", "sub_actions": [
-          {"class": "Continuous", "low": 0.5, "high": 1.0}]},
+          {"class": "Continuous", "low": 0.5, "high": 0.5}]},
         {"class": "Feature", "key": "dr", "sub_actions": [
-          {"class": "Continuous", "low": 0.5, "high": 1.0}]},
+          {"class": "Continuous", "low": 0.5, "high": 0.5}]},
         {"class": "Feature", "key": "height", "sub_actions": [
           {"class": "Equation", "equation": "$...~~.container.height$ + 2*$..~~.dh$"}]},
         {"class": "Feature", "key": "radius", "sub_actions": [
-          {"class": "Equation", "equation": "$...~~.container.radius + 2*$..~~.dr$"}]}]},
+          {"class": "Equation", "equation": "$...~~.container.radius$ + 2*$..~~.dr$"}]}]},
       {"class": "Action", "tag": "borehole", "sub_actions": [
         {"class": "Feature", "key": "constraint", "sub_actions": [
-          {"class": "Equation", "equation": "$...~~.container.number$ % $...~~.container.per_borehole$ == 0}"}]},
+          {"class": "Equation", "equation": "$...~~.container.number$ % $...~~.container.per_borehole$ == 0"}]},
         {"class": "Feature", "key": "number", "sub_actions": [
-          {"class": "Equation", "equation": "$...~~.container.number$ / $...~~.container.per_borehole$"}]},
+          {"class": "Equation", "equation": "$...~~.container.number$ // $...~~.container.per_borehole$"}]},
         {"class": "Feature", "key": "number_plus_one", "sub_actions": [
           {"class": "Equation", "equation": "$..~~.number$ + 1"}]},
         {"class": "Feature", "key": "height", "sub_actions": [
-          {"class": "Equation", "equation": "{...~~.ebs.height}*{...~~.container.per_borehole}"}]},
-        {"class": "Feature", "key": "delta_h", "sub_actions": [
+          {"class": "Equation", "equation": "$...~~.ebs.height$*$...~~.container.per_borehole$"}]},
+        {"class": "Feature", "key": "transform", "sub_actions": [
           {"class": "Equation", "equation": "-$..~~.height$/2"}]},
         {"class": "Feature", "key": "dx", "sub_actions": [
-          {"class": "Continuous", "low": 10, "high": 100}]},
+          {"class": "Continuous", "low": 10, "high": 10}]},
         {"class": "Feature", "key": "length", "sub_actions": [
-          {"class": "Equation", "equation": "$..~~.dx$*{..~~.number}"}]}]}
-    ]}
-  ]}
+          {"class": "Equation", "equation": "$..~~.dx$*$..~~.number$"}]}]},
+      {"class": "Action", "tag": "rock", "sub_actions": [
+        {"class": "Feature", "key": "dx", "sub_actions": [
+          {"class": "Continuous", "low": 25, "high": 25}]},
+        {"class": "Feature", "key": "dy", "sub_actions": [
+          {"class": "Continuous", "low": 25, "high": 25}]},
+        {"class": "Feature", "key": "dz", "sub_actions": [
+          {"class": "Continuous", "low": 25, "high": 25}]},
+        {"class": "Feature", "key": "dnz", "sub_actions": [
+          {"class": "Continuous", "low": 25, "high": 25}]},
+        {"class": "Feature", "key": "x", "sub_actions": [
+          {"class": "Equation", "equation": "-$..~~.dx$ + $...~~.borehole.length$ + $..~~.dx$"}]},
+        {"class": "Feature", "key": "nx", "sub_actions": [
+          {"class": "Equation", "equation": "-$..~~.dx$"}]},
+        {"class": "Feature", "key": "cx", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.nx$ + 0.5*($..~~.x$ - $..~~.nx$)"}]},
+        {"class": "Feature", "key": "y", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.dy$"}]},
+        {"class": "Feature", "key": "ny", "sub_actions": [
+          {"class": "Equation", "equation": "-$..~~.dy$"}]},
+        {"class": "Feature", "key": "cy", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.ny$ + 0.5*($..~~.y$ - $..~~.ny$)"}]},
+        {"class": "Feature", "key": "z", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.dz$ + 0.5*$...~~.borehole.height$"}]},
+        {"class": "Feature", "key": "nz", "sub_actions": [
+          {"class": "Equation", "equation": "-$..~~.dnz$ - 0.5*$...~~.borehole.height$"}]},
+        {"class": "Feature", "key": "cz", "sub_actions": [
+          {"class": "Equation", "equation": "$..~~.nz$ + 0.5*($..~~.z$ - $..~~.nz$)"}]}]}]},
+    {"class": "GetFileJson", "path": "gmsh/cast_iron.json",
+      "mapping": {"data": {"layer": [
+        ["$.~~.geometry.container.radius$;$.~~.size.cast_iron$"],
+        ["$.~~.geometry.container.height$;$.~~.size.cast_iron$"]]}}},
+    {"class": "GetFileJson", "path": "gmsh/filling.json",
+      "mapping": {"data": {"layer": [
+        ["$.~~.geometry.filling.radius$;$.~~.size.filling$"],
+        ["$.~~.geometry.filling.height$;$.~~.size.filling$"]]}}},
+    {"class": "GetFileJson", "path": "gmsh/container.json",
+      "mapping": {"data": {"children_transforms": [
+        [[0, 0, "$.~~.geometry.cast_iron.transform$"]], []]}}},
+    {"class": "GetFileJson", "path": "gmsh/borehole.json",
+      "mapping": {"data": {
+        "layer": [
+          ["$.~~.geometry.ebs.radius$;$.~~.size.ebs$"],
+          ["$.~~.geometry.borehole.height$:$.~~.geometry.container.per_borehole_plus_one$;$.~~.size.ebs$"]],
+        "transforms": [[0, 0, "$.~~.geometry.borehole.transform$"]]}}},
+    {"class": "GetFileJson", "path": "gmsh/boreholes.json",
+      "mapping": {"data": {
+          "matrix": [
+            ["i",
+              "$.~~.geometry.rock.nx$;$.~~.size.rock$",
+              "$.~~.geometry.rock.dx$;$.~~.size.rock$",
+              "$.~~.geometry.borehole.length$:$.~~.geometry.borehole.number_plus_one$;$.~~.size.rock$",
+              "$.~~.geometry.rock.dx$;$.~~.size.rock$"],
+            ["$.~~.geometry.rock.ny$;$.~~.size.rock$", "$.~~.geometry.rock.y$;$.~~.size.rock$"],
+            ["$.~~.geometry.rock.nz$;$.~~.size.rock$", "$.~~.geometry.rock.z$;$.~~.size.rock$"]]}}}]}
 }

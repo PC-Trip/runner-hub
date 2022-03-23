@@ -1,51 +1,52 @@
 {
   "metadata": {},
-  "data": {"key": "fenia.parameter", "class": "action.Feature", "sub_actions": [
-    {"key": "heat", "class": "action.Feature", "sub_actions": [
-      {"key": "property", "class": "action.Feature", "sub_actions": [
-        {"key": "filling", "class": "action.Feature", "sub_actions": [
-          {"key": "density", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 2600, "high": 2800}},
-          {"key": "capacity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 730, "high": 930}},
-          {"key": "conductivity", "class": "action.Feature", "sub_actions": [
-            {"key": "kz", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 1.2, "high": 1.2}},
-            {"key": "z", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Equation", "equation": "{conductivity.z}*{conductivity.z.kz}"}}],
-            "pre_call": {"class": "action.set.Continuous", "low": 1.1, "high": 1.3}},
-          {"key": "source", "class": "action.Feature", "sub_actions": [
-            {"key": "value", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 100, "high": 1000}},
-            {"key": "exponent", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": -1364904924, "high": -1364904924}}]},
-          {"key": "temperature", "class": "action.Feature", "sub_actions": [
-            {"key": "initial", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 100, "high": 130}}]}]},
-        {"key": "cast_iron", "class": "action.Feature", "sub_actions": [
-          {"key": "density", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 7000, "high": 7400}},
-          {"key": "capacity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 440, "high": 540}},
-          {"key": "conductivity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 44.0, "high": 46.0}},
-          {"key": "temperature", "class": "action.Feature", "sub_actions": [
-            {"key": "initial", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 100, "high": 130}}]}]},
-        {"key": "ebs", "class": "action.Feature", "sub_actions": [
-          {"key": "density", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 1800, "high": 2000}},
-          {"key": "capacity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 860, "high": 1060}},
-          {"key": "conductivity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 0.9, "high": 1.1}}]},
-        {"key": "rock", "class": "action.Feature", "sub_actions": [
-          {"key": "density", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 2600, "high": 2800}},
-          {"key": "capacity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 740, "high": 940}},
-          {"key": "conductivity", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 1.7, "high": 1.9}}]},
+  "data": {"class": "Action", "tag": "fenia", "sub_actions": [
+    {"class": "Action", "tag": "heat", "sub_actions": [
+      {"class": "Action", "tag": "property", "sub_actions": [
+        {"class": "Action", "tag": "filling", "sub_actions": [
+          {"class": "Feature", "key": "density", "sub_actions": [
+            {"class": "Continuous", "low": 2600, "high": 2800}]},
+          {"class": "Feature", "key": "capacity", "sub_actions": [
+            {"class": "Continuous", "low": 730, "high": 930}]},
+          {"class": "Feature", "key": "conductivity", "sub_actions": [
+            {"class": "Continuous", "low": 1.2, "high": 1.2}]},
+          {"class": "Action", "tag": "source", "sub_actions": [
+            {"class": "Feature", "key": "value", "sub_actions": [
+              {"class": "Continuous", "low": 100, "high": 1000}]},
+            {"class": "Feature", "key": "exponent", "sub_actions": [
+              {"class": "Continuous", "low": -1364904924, "high": -1364904924}]},
+          {"class": "Action", "tag": "temperature", "sub_actions": [
+            {"class": "Feature", "key": "initial", "sub_actions": [
+              {"class": "Continuous", "low": 100, "high": 130}]}]}]}]},
+        {"class": "Action", "tag": "cast_iron", "sub_actions": [
+          {"class": "Feature", "key": "density", "sub_actions": [
+            {"class": "Continuous", "low": 7000, "high": 7400}]},
+          {"class": "Feature", "key": "capacity", "sub_actions": [
+            {"class": "Continuous", "low": 440, "high": 540}]},
+          {"class": "Feature", "key": "conductivity", "sub_actions": [
+            {"class": "Continuous", "low": 44.0, "high": 46.0}]},
+          {"class": "Action", "tag": "temperature", "sub_actions": [
+            {"class": "Feature", "key": "initial", "sub_actions": [
+              {"class": "Continuous", "low": 100, "high": 130}]}]}]},
+        {"class": "Action", "tag": "ebs", "sub_actions": [
+          {"class": "Feature", "key": "density", "sub_actions": [
+            {"class": "Continuous", "low": 1800, "high": 2000}]},
+          {"class": "Feature", "key": "capacity", "sub_actions": [
+            {"class": "Continuous", "low": 860, "high": 1060}]},
+          {"class": "Feature", "key": "conductivity", "sub_actions": [
+            {"class": "Continuous", "low": 0.9, "high": 1.1}]}]},
+        {"class": "Action", "tag": "rock", "sub_actions": [
+          {"class": "Feature", "key": "density", "sub_actions": [
+            {"class": "Continuous", "low": 2600, "high": 2800}]},
+          {"class": "Feature", "key": "capacity", "sub_actions": [
+            {"class": "Continuous", "low": 740, "high": 940}]},
+          {"class": "Feature", "key": "conductivity", "sub_actions": [
+            {"class": "Continuous", "low": 1.7, "high": 1.9}]}]}]}
+
+  ]}]}
+
+
+
         {"class": "action.get.FoamDictionary", "path": "fenia/constant/termProperty",
           "mapping": {
             "Filling": {
@@ -80,6 +81,7 @@
                 "{property.rock.conductivity}",
                 "{property.rock.conductivity}",
                 "{property.rock.conductivity}"]}}}]},
+
       {"key": "condition", "class": "action.Feature", "sub_actions": [
         {"key": "boundary", "class": "action.Feature", "sub_actions": [
           {"key": "x", "class": "action.Feature", "sub_actions": [
