@@ -1,7 +1,7 @@
 {
   "metadata": {},
   "data": {
-    "class": "Subprocess",
+    "class": "P",
     "subprocess_kwargs": {
       "args": ["checkFeniaMesh"],
       "cwd": "fenia",

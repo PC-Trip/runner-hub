@@ -1,117 +1,90 @@
 {
   "metadata": {},
-  "data": {"class": "Action", "tag": "fenia", "sub_actions": [
-    {"class": "Action", "tag": "heat", "sub_actions": [
-      {"class": "Action", "tag": "property", "sub_actions": [
-        {"class": "Action", "tag": "filling", "sub_actions": [
-          {"class": "Feature", "key": "density", "sub_actions": [
-            {"class": "Continuous", "low": 2600, "high": 2800}]},
-          {"class": "Feature", "key": "capacity", "sub_actions": [
-            {"class": "Continuous", "low": 730, "high": 930}]},
-          {"class": "Feature", "key": "conductivity", "sub_actions": [
-            {"class": "Continuous", "low": 1.2, "high": 1.2}]},
-          {"class": "Action", "tag": "source", "sub_actions": [
-            {"class": "Feature", "key": "value", "sub_actions": [
-              {"class": "Continuous", "low": 100, "high": 1000}]},
-            {"class": "Feature", "key": "exponent", "sub_actions": [
-              {"class": "Continuous", "low": -1364904924, "high": -1364904924}]},
-          {"class": "Action", "tag": "temperature", "sub_actions": [
-            {"class": "Feature", "key": "initial", "sub_actions": [
-              {"class": "Continuous", "low": 100, "high": 130}]}]}]}]},
-        {"class": "Action", "tag": "cast_iron", "sub_actions": [
-          {"class": "Feature", "key": "density", "sub_actions": [
-            {"class": "Continuous", "low": 7000, "high": 7400}]},
-          {"class": "Feature", "key": "capacity", "sub_actions": [
-            {"class": "Continuous", "low": 440, "high": 540}]},
-          {"class": "Feature", "key": "conductivity", "sub_actions": [
-            {"class": "Continuous", "low": 44.0, "high": 46.0}]},
-          {"class": "Action", "tag": "temperature", "sub_actions": [
-            {"class": "Feature", "key": "initial", "sub_actions": [
-              {"class": "Continuous", "low": 100, "high": 130}]}]}]},
-        {"class": "Action", "tag": "ebs", "sub_actions": [
-          {"class": "Feature", "key": "density", "sub_actions": [
-            {"class": "Continuous", "low": 1800, "high": 2000}]},
-          {"class": "Feature", "key": "capacity", "sub_actions": [
-            {"class": "Continuous", "low": 860, "high": 1060}]},
-          {"class": "Feature", "key": "conductivity", "sub_actions": [
-            {"class": "Continuous", "low": 0.9, "high": 1.1}]}]},
-        {"class": "Action", "tag": "rock", "sub_actions": [
-          {"class": "Feature", "key": "density", "sub_actions": [
-            {"class": "Continuous", "low": 2600, "high": 2800}]},
-          {"class": "Feature", "key": "capacity", "sub_actions": [
-            {"class": "Continuous", "low": 740, "high": 940}]},
-          {"class": "Feature", "key": "conductivity", "sub_actions": [
-            {"class": "Continuous", "low": 1.7, "high": 1.9}]}]}]}
-
+  "data": {"class": "A", "tag": "input", "sub_actions": [
+    {"class": "A", "tag": "heat", "sub_actions": [
+      {"class": "A", "tag": "property", "sub_actions": [
+        {"class": "A", "tag": "filling", "sub_actions": [
+          {"class": "FC", "tag": "density", "low": 2600, "high": 2800},
+          {"class": "FC", "tag": "capacity", "low": 730, "high": 930},
+          {"class": "FC", "tag": "conductivity", "low": 1.2, "high": 1.2},
+          {"class": "A", "tag": "source", "sub_actions": [
+            {"class": "FC", "tag": "value", "low": 100, "high": 1000},
+            {"class": "FC", "tag": "exponent", "low": -1364904924, "high": -1364904924},
+          {"class": "A", "tag": "temperature", "sub_actions": [
+            {"class": "FC", "tag": "initial", "low": 100, "high": 130}]}]}]},
+        {"class": "A", "tag": "cast_iron", "sub_actions": [
+          {"class": "FC", "tag": "density", "low": 7000, "high": 7400},
+          {"class": "FC", "tag": "capacity", "low": 440, "high": 540},
+          {"class": "FC", "tag": "conductivity", "low": 44.0, "high": 46.0},
+          {"class": "A", "tag": "temperature", "sub_actions": [
+            {"class": "FC", "tag": "initial", "low": 100, "high": 130}]}]},
+        {"class": "A", "tag": "ebs", "sub_actions": [
+          {"class": "FC", "tag": "density", "low": 1800, "high": 2000},
+          {"class": "FC", "tag": "capacity", "low": 860, "high": 1060},
+          {"class": "FC", "tag": "conductivity", "low": 0.9, "high": 1.1}]},
+        {"class": "A", "tag": "rock", "sub_actions": [
+          {"class": "FC", "tag": "density", "low": 2600, "high": 2800},
+          {"class": "FC", "tag": "capacity", "low": 740, "high": 940},
+          {"class": "FC", "tag": "conductivity", "low": 1.7, "high": 1.9}]}]},
+      {"class": "A", "tag": "condition", "sub_actions": [
+        {"class": "A", "tag": "boundary", "sub_actions": [
+          {"class": "A", "tag": "x", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]},
+          {"class": "A", "tag": "y", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]},
+          {"class": "A", "tag": "z", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]},
+          {"class": "A", "tag": "nx", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]},
+          {"class": "A", "tag": "ny", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]},
+          {"class": "A", "tag": "nz", "sub_actions": [
+            {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]}]},
+        {"class": "A", "tag": "initial", "sub_actions": [
+          {"class": "FC", "tag": "temperature", "low": 8, "high": 10}]}]},
+      {"class": "GetFileFoam", "input_path": "fenia/constant/termProperty",
+        "template": {
+          "Filling": {
+            "rho": "$.~~.property.filling.density$",
+            "cHeat": "$.~~.property.filling.capacity$",
+            "DT": [
+              "$.~~.property.filling.conductivity$",
+              "$.~~.property.filling.conductivity$",
+              "$.~~.property.filling.conductivity$"],
+            "qW": "$.~~.property.filling.source.value$",
+            "tau": "$.~~.property.filling.source.exponent$",
+            "inZoneTemperature": "$.~~.property.filling.temperature.initial$"},
+          "CastIron": {
+            "rho": "$.~~.property.cast_iron.density$",
+            "cHeat": "$.~~.property.cast_iron.capacity$",
+            "DT": [
+              "$.~~.property.cast_iron.conductivity$",
+              "$.~~.property.cast_iron.conductivity$",
+              "$.~~.property.cast_iron.conductivity$"],
+            "inZoneTemperature": "$.~~.property.cast_iron.temperature.initial$"},
+          "EBS": {
+            "rho": "$.~~.property.ebs.density$",
+            "cHeat": "$.~~.property.ebs.capacity$",
+            "DT": [
+              "$.~~.property.ebs.conductivity$",
+              "$.~~.property.ebs.conductivity$",
+              "$.~~.property.ebs.conductivity$"]},
+          "Rock": {
+            "rho": "$.~~.property.rock.density$",
+            "cHeat": "$.~~.property.rock.capacity$",
+            "DT": [
+              "$.~~.property.rock.conductivity$",
+              "$.~~.property.rock.conductivity$",
+              "$.~~.property.rock.conductivity$"]}}},
+      {"class": "GetFileFoam", "input_path": "fenia/constant/T",
+        "template": {
+          "Rock-X": {"timeValueTr constant": "{$.~~.condition.boundary.x.temperature$"},
+          "Rock-NX": {"timeValueTr constant": "$.~~.condition.boundary.nx.temperature$"},
+          "Rock-Y": {"timeValueTr constant": "$.~~.condition.boundary.y.temperature$"},
+          "Rock-NY": {"timeValueTr constant": "$.~~.condition.boundary.ny.temperature$"},
+          "Rock-Z": {"timeValueTr constant": "$.~~.condition.boundary.z.temperature$"},
+          "Rock-NZ": {"timeValueTr constant": "$.~~.condition.boundary.nz.temperature$"}}},
+      {"class": "GetFileFoam", "input_path": "fenia/0/T",
+        "template": {"": {"internalField uniform": "$.~~.condition.initial.temperature$"}}}
   ]}]}
-
-
-
-        {"class": "action.get.FoamDictionary", "path": "fenia/constant/termProperty",
-          "mapping": {
-            "Filling": {
-              "rho": "{property.filling.density}",
-              "cHeat": "{property.filling.capacity}",
-              "DT": [
-                "{property.filling.conductivity}",
-                "{property.filling.conductivity}",
-                "{property.filling.conductivity.z}"],
-              "qW": "{property.filling.source.value}",
-              "tau": "{property.filling.source.exponent}",
-              "inZoneTemperature": "{property.filling.temperature.initial}"},
-            "CastIron": {
-              "rho": "{property.cast_iron.density}",
-              "cHeat": "{property.cast_iron.capacity}",
-              "DT": [
-                "{property.cast_iron.conductivity}",
-                "{property.cast_iron.conductivity}",
-                "{property.cast_iron.conductivity}"],
-              "inZoneTemperature": "{property.cast_iron.temperature.initial}"},
-            "EBS": {
-              "rho": "{property.ebs.density}",
-              "cHeat": "{property.ebs.capacity}",
-              "DT": [
-                "{property.ebs.conductivity}",
-                "{property.ebs.conductivity}",
-                "{property.ebs.conductivity}"]},
-            "Rock": {
-              "rho": "{property.rock.density}",
-              "cHeat": "{property.rock.capacity}",
-              "DT": [
-                "{property.rock.conductivity}",
-                "{property.rock.conductivity}",
-                "{property.rock.conductivity}"]}}}]},
-
-      {"key": "condition", "class": "action.Feature", "sub_actions": [
-        {"key": "boundary", "class": "action.Feature", "sub_actions": [
-          {"key": "x", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"key": "nx", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"key": "y", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"key": "ny", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"key": "z", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"key": "nz", "class": "action.Feature", "sub_actions": [
-            {"key": "temperature", "class": "action.Feature",
-              "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10}}]},
-          {"class": "action.get.FoamDictionary", "path": "fenia/constant/T",
-            "mapping": {
-              "Rock-X": {"timeValueTr constant": "{boundary.x.temperature}"},
-              "Rock-NX": {"timeValueTr constant": "{boundary.nx.temperature}"},
-              "Rock-Y": {"timeValueTr constant": "{boundary.y.temperature}"},
-              "Rock-NY": {"timeValueTr constant": "{boundary.ny.temperature}"},
-              "Rock-Z": {"timeValueTr constant": "{boundary.z.temperature}"},
-              "Rock-NZ": {"timeValueTr constant": "{boundary.nz.temperature}"}}}]},
-        {"key": "initial", "class": "action.Feature", "sub_actions": [
-          {"key": "temperature", "class": "action.Feature",
-            "pre_call": {"class": "action.set.Continuous", "low": 8, "high": 10},
-            "post_call": {"class": "action.get.FoamDictionary", "path": "fenia/0/T",
-              "mapping": {"": {"internalField uniform": "{temperature}"}}}}]}]}]}]}}
+}

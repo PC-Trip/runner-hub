@@ -4,107 +4,107 @@
   },
   "data": {"class": "Action", "tag": "gmsh", "sub_actions": [
     {"class": "Action", "tag": "mesh", "sub_actions": [
-      {"class": "Feature", "key": "elements", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "int",
+      {"class": "Feature", "tag": "elements", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "int",
           "pattern": "Total:.*((?<=and)[\\s0-9]*(?=elements))"}]},
-      {"class": "Feature", "key": "nodes", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "int",
+      {"class": "Feature", "tag": "nodes", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "int",
           "pattern": "Total:.*((?<=:)[\\s0-9]*(?=nodes))"}]},
-      {"class": "Feature", "key": "blocks", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "int",
+      {"class": "Feature", "tag": "blocks", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "int",
           "pattern": "number of blocks:.*((?<=:)[\\s0-9]*(?=))"}]},
-      {"class": "Feature", "key": "volumes", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "int",
+      {"class": "Feature", "tag": "volumes", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "int",
           "pattern": "n_volumes:.*((?<=:)[\\s0-9]*(?=))"}]},
       {"class": "Action", "tag": "jacobian", "sub_actions": [
         {"class": "Action", "tag": "min", "sub_actions": [
-          {"class": "Feature", "key": "min", "sub_actions": [
-            {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+          {"class": "Feature", "tag": "min", "sub_actions": [
+            {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
               "pattern": "Info: minJ .*((?<==)[\\s0-9.e-]*(?=,))"},
-            {"class": "Feature", "key": "constraint", "sub_actions": [
+            {"class": "Feature", "tag": "constraint", "sub_actions": [
               {"class": "Equation", "equation": "$..~~$ is not None and $..~~$ > 0"}]}]},
-          {"class": "Feature", "key": "avg", "sub_actions": [
-            {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+          {"class": "Feature", "tag": "avg", "sub_actions": [
+            {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
               "pattern": "Info: minJ .*((?<=,)[\\s0-9.e-]*(?=,))"}]},
-          {"class": "Feature", "key": "max", "sub_actions": [
-            {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+          {"class": "Feature", "tag": "max", "sub_actions": [
+            {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
               "pattern": "Info: minJ .*((?<=,)[\\s0-9.e-]*(?=\\())"}]}]}]},
       {"class": "Action", "tag": "metric", "sub_actions": [
       {"class": "Action", "tag": "ige", "sub_actions": [
-        {"class": "Feature", "key": "min", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "min", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: IGE .*((?<==)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "avg", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "avg", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: IGE .*((?<=,)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "max", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "max", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: IGE .*((?<=,)[\\s0-9.e-]*(?=\\())"}]}]},
       {"class": "Action", "tag": "icn", "sub_actions": [
-        {"class": "Feature", "key": "min", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "min", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: ICN .*((?<==)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "avg", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "avg", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: ICN .*((?<=,)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "max", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "max", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: ICN .*((?<=,)[\\s0-9.e-]*(?=\\())"}]}]},
       {"class": "Action", "tag": "jbj", "sub_actions": [
-        {"class": "Feature", "key": "min", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "min", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: minJ/maxJ .*((?<==)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "avg", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "avg", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: minJ/maxJ .*((?<=,)[\\s0-9.e-]*(?=,))"}]},
-        {"class": "Feature", "key": "max", "sub_actions": [
-          {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+        {"class": "Feature", "tag": "max", "sub_actions": [
+          {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
             "pattern": "Info: minJ/maxJ .*((?<=,)[\\s0-9.e-]*(?=\\())"}]}]}]}]},
-    {"class": "Feature", "key": "time", "sub_actions": [
-      {"class": "Feature", "key": "transform", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+    {"class": "Feature", "tag": "time", "sub_actions": [
+      {"class": "Feature", "tag": "transform", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.block.block.transform.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "register", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "register", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.block.block.register.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "boolean", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "boolean", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.boolean.boolean.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "synchronize", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "synchronize", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.registry.synchronize.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "structure", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "structure", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.structure.structure.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "quadrate", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "quadrate", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.quadrate.quadrate.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "smooth", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "smooth", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.smooth.smooth.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "size", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "size", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.size.size.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "pre_unregister", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "pre_unregister", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.block.block.pre_unregister -((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "zone", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "zone", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.zone.zone.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "unregister", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "unregister", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.block.block.unregister -((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "generate", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "generate", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh.generate.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "optimize", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "optimize", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.optimize.optimize.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "refine", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "refine", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh_scripts.refine.refine.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
-      {"class": "Feature", "key": "write", "sub_actions": [
-        {"class": "SetFileRegex", "path": "gmsh/gmsh.log", "value_type": "float",
+      {"class": "Feature", "tag": "write", "sub_actions": [
+        {"class": "SetFileRegex", "input_path": "gmsh/gmsh.log", "value_type": "float",
           "pattern": "gmsh.write.*-((?<=-)[\\s0-9.e+-]*(?=s))"}]},
       {"class": "Equation", "equation": "sum([$.~~.transform$, $.~~.register$, $.~~.boolean$, $.~~.synchronize$, $.~~.structure$, $.~~.quadrate$, $.~~.smooth$, $.~~.size$, $.~~.pre_unregister$, $.~~.zone$, $.~~.unregister$, $.~~.generate$, $.~~.optimize$, $.~~.refine$, $.~~.write$])"}]}
   ]

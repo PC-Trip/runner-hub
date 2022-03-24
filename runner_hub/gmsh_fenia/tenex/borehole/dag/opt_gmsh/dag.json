@@ -1,0 +1,6 @@
+{
+  "metadata": {},
+  "data": {"class": "A", "tag": "gmsh", "sub_actions": [
+    "/opt_gmsh/input.json",
+    "/opt_gmsh/output.json"]}
+}

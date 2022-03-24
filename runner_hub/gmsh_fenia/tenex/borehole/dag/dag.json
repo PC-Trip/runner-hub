@@ -10,9 +10,8 @@
     "sampler": "NSGAIISampler",
     "pruner": "MedianPruner",
     "sub_actions": [
-      "/opt_gmsh/input_.json",
-      "/opt_gmsh/run.json",
-      "/opt_gmsh/output.json"
+      "/opt_gmsh/dag.json",
+      "/opt_fenia/dag.json"
     ],
     "objectives": {
       "~~.gmsh.mesh.metric.ige.min": "maximize"},

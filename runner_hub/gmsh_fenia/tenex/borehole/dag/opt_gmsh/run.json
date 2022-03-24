@@ -1,7 +1,7 @@
 {
   "metadata": {},
   "data": {
-    "class": "Subprocess",
+    "class": "P",
     "subprocess_kwargs": {
       "args": ["D:/runner-hub/venv/Scripts/python.exe", "-m", "gmsh_scripts", "boreholes.json", "-f", "msh2", "-o", "mesh", "-l", "gmsh.log", "-v", "DEBUG"],
       "cwd": "gmsh",
