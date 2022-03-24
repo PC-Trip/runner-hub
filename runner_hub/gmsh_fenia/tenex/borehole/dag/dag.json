@@ -8,15 +8,28 @@
     "study": "tenex_borehole",
     "copies": ["gmsh", "fenia"],
     "sampler": "NSGAIISampler",
+    "sampler_kwargs": {
+      "population_size": 50,
+      "mutation_prob": null,
+      "crossover_prob": 0.9,
+      "swapping_prob": 0.5,
+      "seed": null},
     "pruner": "MedianPruner",
+    "pruner_kwargs": {
+      "n_startup_trials": 5,
+      "n_warmup_steps": 0,
+      "interval_steps": 1,
+      "n_min_trials": 1},
     "sub_actions": [
-      "/opt_gmsh/dag.json",
-      "/opt_fenia/dag.json"
+      "/gmsh.json",
+      "/fenia.json"
     ],
     "objectives": {
-      "~~.gmsh.mesh.metric.ige.min": "maximize"},
+      "~~.gmsh.output.mesh.elements": "minimize",
+      "~~.gmsh.output.mesh.metric.ige.min": "maximize",
+      "~~.fenia.output.heat.temperature.max": "minimize"},
     "constraints": [
-      "~~.gmsh.geometry.borehole.constraint",
-      "~~.gmsh.mesh.jacobian.min.min.constraint"]
+      "~~.gmsh.input.geometry.borehole.constraint",
+      "~~.gmsh.output.mesh.jacobian.min.min.constraint"]
   }
 }

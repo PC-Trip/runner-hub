@@ -20,8 +20,8 @@
       "/optimize/run.json",
       "/optimize/output.json"],
     "objectives": {
-      "~~.gmsh.mesh.metric.ige.min": "maximize"},
+      "~~.output.mesh.metric.ige.min": "maximize"},
     "constraints": [
-      "~~.gmsh.mesh.jacobian.min.min.constraint"]
+      "~~.output.mesh.jacobian.min.min.constraint"]
   }
 }

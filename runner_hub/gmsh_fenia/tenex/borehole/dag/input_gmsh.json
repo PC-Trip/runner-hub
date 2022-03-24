@@ -78,13 +78,13 @@
     {"class": "GJ", "input_path": "gmsh/boreholes.json",
       "template": {
         "metadata": {"run": {"options": {
-          "Mesh.Algorithm": "$.~~.algorithm.2d",
+          "Mesh.Algorithm": "$.~~.algorithm.2d$",
           "Mesh.Algorithm3D": "$.~~.algorithm.3d$",
           "Mesh.MeshSizeFactor": "$.~~.size.factor$",
           "Mesh.MeshSizeMin": "$.~~.size.min$",
           "Mesh.MeshSizeMax": "$.~~.size.max$",
-          "Mesh.MeshSizeFromCurvature": "$.~~.size.curvature",
-          "Mesh.MeshSizeExtendFromBoundary": "$.~~.size.boundary"}}},
+          "Mesh.MeshSizeFromCurvature": "$.~~.size.curvature$",
+          "Mesh.MeshSizeExtendFromBoundary": "$.~~.size.boundary$"}}},
         "data": {"matrix": [
           ["i",
             "$.~~.geometry.rock.nx$;$.~~.size.rock$",

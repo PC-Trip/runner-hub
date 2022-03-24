@@ -3,7 +3,7 @@
     "comment_algorithm_2d": "1: MeshAdapt, 2: Automatic, 3: Initial mesh only, 5: Delaunay, 6: Frontal-Delaunay (default), 7: BAMG, 8: Frontal-Delaunay for Quads, 9: Packing of Parallelograms",
     "comment_algorithms_3d": "1: Delaunay (default), 3: Initial mesh only, 4: Frontal, 7: MMG3D, 9: R-tree, 10: HXT"
   },
-  "data": {"class": "Action", "tag": "gmsh", "sub_actions": [
+  "data": {"class": "Action", "tag": "input", "sub_actions": [
     {"class": "Action", "tag": "algorithm", "sub_actions": [
       {"class": "Feature", "tag": "2d", "sub_actions": [
         {"class": "Categorical", "choices": [1, 2, 3, 5, 6, 7, 8, 9]},

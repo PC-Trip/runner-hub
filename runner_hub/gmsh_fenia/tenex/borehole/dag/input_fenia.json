@@ -9,9 +9,9 @@
           {"class": "FC", "tag": "conductivity", "low": 1.2, "high": 1.2},
           {"class": "A", "tag": "source", "sub_actions": [
             {"class": "FC", "tag": "value", "low": 100, "high": 1000},
-            {"class": "FC", "tag": "exponent", "low": -1364904924, "high": -1364904924},
+            {"class": "FC", "tag": "exponent", "low": -1364904924, "high": -1364904924}]},
           {"class": "A", "tag": "temperature", "sub_actions": [
-            {"class": "FC", "tag": "initial", "low": 100, "high": 130}]}]}]},
+            {"class": "FC", "tag": "initial", "low": 100, "high": 130}]}]},
         {"class": "A", "tag": "cast_iron", "sub_actions": [
           {"class": "FC", "tag": "density", "low": 7000, "high": 7400},
           {"class": "FC", "tag": "capacity", "low": 440, "high": 540},
@@ -78,7 +78,7 @@
               "$.~~.property.rock.conductivity$"]}}},
       {"class": "GetFileFoam", "input_path": "fenia/constant/T",
         "template": {
-          "Rock-X": {"timeValueTr constant": "{$.~~.condition.boundary.x.temperature$"},
+          "Rock-X": {"timeValueTr constant": "$.~~.condition.boundary.x.temperature$"},
           "Rock-NX": {"timeValueTr constant": "$.~~.condition.boundary.nx.temperature$"},
           "Rock-Y": {"timeValueTr constant": "$.~~.condition.boundary.y.temperature$"},
           "Rock-NY": {"timeValueTr constant": "$.~~.condition.boundary.ny.temperature$"},
