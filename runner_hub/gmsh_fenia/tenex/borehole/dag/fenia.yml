@@ -1,0 +1,10 @@
+data:
+  class: A
+  tag: fenia
+  sub_actions:
+    - /convert_mesh.json
+    - /check_mesh.json
+    - /input_fenia.json
+    - /run_fenia.json
+    - /fenia_points.json
+    - /output_fenia.json

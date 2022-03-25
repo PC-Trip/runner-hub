@@ -11,7 +11,7 @@ data:
   sampler_kwargs:
     seed: ~
   pruner: NopPruner
-  sub_actions: [/gmsh.json, /fenia.json]
+  sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:
     ~~.gmsh.output.mesh.elements: minimize
     ~~.gmsh.output.mesh.metric.ige.min: maximize

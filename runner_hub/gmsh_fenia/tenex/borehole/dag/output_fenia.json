@@ -46,7 +46,17 @@
             {"class": "FR", "tag": "z", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
               "pattern": "-?\\d+\\.\\d+", "index": 12}]}]},
         {"class": "FE", "tag": "max",
-          "equation": "max([$..~~.rock.max.value$, $..~~.filling.max.value$, $..~~.ebs.max.value$, $..~~.cast_iron.max.value$])"}]},
+          "equation": "max([$..~~.rock.max.value$, $..~~.filling.max.value$, $..~~.ebs.max.value$, $..~~.cast_iron.max.value$])"},
+        {"class": "A", "tag": "point", "sub_actions": [
+          {"class": "FR", "tag": "ground", "input_path": "fenia/T", "value_type": "float", "read_type": "line",
+            "pattern": "-?\\d+\\.?\\d*", "index": null, "line_index": 2, "line_start": 14, "sub_actions": [
+            {"class": "FE", "tag": "max", "equation": "np.max($..~~$)"},
+            {"class": "FE", "tag": "min", "equation": "np.min($..~~$)"},
+            {"class": "FE", "tag": "mean", "equation": "np.mean($..~~$)"},
+            {"class": "FE", "tag": "std", "equation": "np.std($..~~$)"},
+            {"class": "FE", "tag": "median", "equation": "np.median($..~~$)"},
+            {"class": "FE", "tag": "p95", "equation": "np.percentile($..~~$, 95)"},
+            {"class": "SV", "value": null}]}]}]},
       {"class": "A", "tag": "volume", "sub_actions": [
         {"class": "FR", "tag": "rock", "input_path": "fenia/zoneVol", "value_type": "float", "read_type": "all",
           "pattern": "-?\\d+\\.\\d+", "index": 1},

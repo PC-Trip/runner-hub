@@ -20,7 +20,7 @@ data:
     n_warmup_steps: 0
     interval_steps: 1
     n_min_trials: 1
-  sub_actions: [/gmsh.json, /fenia.json]
+  sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:
     ~~.gmsh.output.mesh.elements: minimize
     ~~.gmsh.output.mesh.metric.ige.min: maximize

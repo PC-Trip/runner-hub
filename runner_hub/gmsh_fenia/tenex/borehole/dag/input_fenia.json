@@ -85,6 +85,7 @@
           "Rock-Z": {"timeValueTr constant": "$.~~.condition.boundary.z.temperature$"},
           "Rock-NZ": {"timeValueTr constant": "$.~~.condition.boundary.nz.temperature$"}}},
       {"class": "GetFileFoam", "input_path": "fenia/0/T",
-        "template": {"": {"internalField uniform": "$.~~.condition.initial.temperature$"}}}
+        "template": {"": {"internalField uniform": "$.~~.condition.initial.temperature$"}}},
+      {"class": "GF", "template": "fenia/constant/pointsCoord"}
   ]}]}
 }

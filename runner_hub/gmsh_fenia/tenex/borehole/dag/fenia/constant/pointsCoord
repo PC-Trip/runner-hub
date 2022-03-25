@@ -9,6 +9,6 @@ FeniaFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 // "center","bottom","top","lateral-x","lateral-y","lateral-x-0.5","lateral-x-1.5" 
-1((0 0 0));
+1(($~gmsh~.input.geometry.rock.cx$ $~gmsh~.input.geometry.rock.cy$ $~gmsh~.input.geometry.rock.z$));
 
 // ************************************************************************* //
