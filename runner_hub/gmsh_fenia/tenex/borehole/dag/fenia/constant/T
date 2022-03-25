@@ -11,8 +11,9 @@ FeniaFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
     Rock-Z
     {
-        type            timeValueTr;
-        timeValueTr constant 9.0;
+        type            convectionFlux;
+        TRef            9.0;
+        heatTrans       10.0;
     }
     Rock-NZ
     {

@@ -1,0 +1,22 @@
+FROM ubuntu:20.04 AS builder
+
+# This COPY all files from dag directory to /dag directory in IMAGE
+# WORKDIR /dag
+# COPY dag .
+
+# This COPY dag directory to /dag/dag directory in IMAGE
+# WORKDIR /dag
+# COPY dag ./dag
+
+# You can bind directory to IMAGE after build
+# docker run IMAGE -v $(pwd)/dag:/dag
+# ENTRYPOINT ["ls"]
+# CMD ["dag"]
+
+# This run ENTRYPOINT with CMD args on docker run command
+# ENTRYPOINT ["echo"]
+# CMD ["Hello world!"]
+# Command docker run IMAGE returns "Hello world!"
+# Command docker run IMAGE "Hello man!" returns "Hello man!"
+
+

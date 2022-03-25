@@ -82,7 +82,7 @@
           "Rock-NX": {"timeValueTr constant": "$.~~.condition.boundary.nx.temperature$"},
           "Rock-Y": {"timeValueTr constant": "$.~~.condition.boundary.y.temperature$"},
           "Rock-NY": {"timeValueTr constant": "$.~~.condition.boundary.ny.temperature$"},
-          "Rock-Z": {"timeValueTr constant": "$.~~.condition.boundary.z.temperature$"},
+          "Rock-Z": {"TRef": "$.~~.condition.boundary.z.temperature$"},
           "Rock-NZ": {"timeValueTr constant": "$.~~.condition.boundary.nz.temperature$"}}},
       {"class": "GetFileFoam", "input_path": "fenia/0/T",
         "template": {"": {"internalField uniform": "$.~~.condition.initial.temperature$"}}},

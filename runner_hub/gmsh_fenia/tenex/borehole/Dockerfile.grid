@@ -168,6 +168,6 @@ RUN pip3 install --no-cache-dir mltrip-runner
 RUN pip3 install --no-cache-dir gmsh-scripts
 
 WORKDIR /dag
-# COPY dag .
+COPY dag .
 ENTRYPOINT ["python", "-m", "runner"]
-CMD ["dag.yml"]
+CMD ["dag_grid.yml"]

@@ -4,8 +4,8 @@ data:
   class: Optuna
   n_trials: 2
   work_path: work
-  storage: sqlite:///work.db
-  study: tenex_borehole
+  storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
+  study: tenex_borehole_1
   copies: [gmsh, fenia]
   sampler: GridSampler
   sampler_kwargs:
