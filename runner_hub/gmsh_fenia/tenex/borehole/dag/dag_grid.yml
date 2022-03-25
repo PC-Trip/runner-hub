@@ -1,0 +1,68 @@
+# Samplers https://optuna.readthedocs.io/en/stable/reference/samplers.html
+# Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
+data:
+  class: Optuna
+  n_trials: 2
+  work_path: work
+  storage: sqlite:///work.db
+  study: tenex_borehole
+  copies: [gmsh, fenia]
+  sampler: GridSampler
+  sampler_kwargs:
+    search_space:
+      ~~.fenia.input.heat.condition.boundary.nx.temperature: [9.0]
+      ~~.fenia.input.heat.condition.boundary.ny.temperature: [9.0]
+      ~~.fenia.input.heat.condition.boundary.nz.temperature: [9.0]
+      ~~.fenia.input.heat.condition.boundary.x.temperature: [9.0]
+      ~~.fenia.input.heat.condition.boundary.y.temperature: [9.0]
+      ~~.fenia.input.heat.condition.boundary.z.temperature: [9.0]
+      ~~.fenia.input.heat.condition.initial.temperature: [9.0]
+      ~~.fenia.input.heat.property.cast_iron.capacity: [490.0]
+      ~~.fenia.input.heat.property.cast_iron.conductivity: [45.0]
+      ~~.fenia.input.heat.property.cast_iron.density: [7200.0]
+      ~~.fenia.input.heat.property.cast_iron.temperature.initial: [110.0]
+      ~~.fenia.input.heat.property.ebs.capacity: [960.0]
+      ~~.fenia.input.heat.property.ebs.conductivity: [1.0]
+      ~~.fenia.input.heat.property.ebs.density: [1900.0]
+      ~~.fenia.input.heat.property.filling.capacity: [830.0]
+      ~~.fenia.input.heat.property.filling.conductivity: [1.2]
+      ~~.fenia.input.heat.property.filling.density: [2700.0]
+      ~~.fenia.input.heat.property.filling.source.value: [300.0]
+      ~~.fenia.input.heat.property.filling.source.exponent: [-1364904924.0]
+      ~~.fenia.input.heat.property.filling.temperature.initial: [110.0]
+      ~~.fenia.input.heat.property.rock.capacity: [840.0]
+      ~~.fenia.input.heat.property.rock.conductivity: [1.8]
+      ~~.fenia.input.heat.property.rock.density: [2700.0]
+      ~~.gmsh.input.algorithm.2d: [6]
+      ~~.gmsh.input.algorithm.3d: [1]
+      ~~.gmsh.input.geometry.borehole.dx: [25.0]
+      ~~.gmsh.input.geometry.cast_iron.dh: [0.235]
+      ~~.gmsh.input.geometry.cast_iron.dr: [0.235]
+      ~~.gmsh.input.geometry.container.number: [8]
+      ~~.gmsh.input.geometry.container.per_borehole: [2]
+      ~~.gmsh.input.geometry.ebs.dh: [0.5]
+      ~~.gmsh.input.geometry.ebs.dr: [0.5]
+      ~~.gmsh.input.geometry.filling.height: [5.030]
+      ~~.gmsh.input.geometry.filling.radius: [1.215]
+      ~~.gmsh.input.geometry.rock.dnz: [25.0]
+      ~~.gmsh.input.geometry.rock.dx: [25.0]
+      ~~.gmsh.input.geometry.rock.dy: [25.0]
+      ~~.gmsh.input.geometry.rock.dz: [25.0]
+      ~~.gmsh.input.size.boundary: [2]
+      ~~.gmsh.input.size.cast_iron: [0.5]
+      ~~.gmsh.input.size.curvature: [100.0]
+      ~~.gmsh.input.size.ebs: [0.5]
+      ~~.gmsh.input.size.factor: [1.0]
+      ~~.gmsh.input.size.filling: [0.5]
+      ~~.gmsh.input.size.max: [10.0]
+      ~~.gmsh.input.size.min: [1.0]
+      ~~.gmsh.input.size.rock: [5.0]
+  pruner: NopPruner
+  sub_actions: [/gmsh.json, /fenia.json]
+  objectives:
+    ~~.gmsh.output.mesh.elements: minimize
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+    ~~.fenia.output.heat.temperature.max: minimize
+  constraints:
+    - ~~.gmsh.input.geometry.borehole.constraint
+    - ~~.gmsh.output.mesh.jacobian.min.min.constraint

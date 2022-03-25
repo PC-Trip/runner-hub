@@ -10,13 +10,13 @@
     {"class": "A", "tag": "size", "sub_actions": [
       {"class": "FC", "tag": "factor", "low": 0.7, "high": 1.3},
       {"class": "FC", "tag": "min", "low": 0.1, "high": 1},
-      {"class": "FC", "tag": "max", "low": 1, "high": 5},
+      {"class": "FC", "tag": "max", "low": 1, "high": 10},
       {"class": "FC", "tag": "curvature", "low": 20, "high": 200},
       {"class": "FD", "tag": "boundary", "low": 1, "high": 2},
       {"class": "FC", "tag": "cast_iron", "low": 0.5, "high": 0.5},
       {"class": "FC", "tag": "filling", "low": 0.5, "high": 0.5},
       {"class": "FC", "tag": "ebs", "low": 0.5, "high": 0.5},
-      {"class": "FC", "tag": "rock", "low": 0.5, "high": 0.5}]},
+      {"class": "FC", "tag": "rock", "low": 5, "high": 5}]},
     {"class": "A", "tag": "geometry", "sub_actions": [
       {"class": "A", "tag": "filling", "sub_actions": [
         {"class": "FC", "tag": "height", "low": 5.030, "high": 5.030},
@@ -42,7 +42,7 @@
         {"class": "FE", "tag": "number_plus_one", "equation": "$..~~.number$ + 1"},
         {"class": "FE", "tag": "height", "equation": "$...~~.ebs.height$*$...~~.container.per_borehole$"},
         {"class": "FE", "tag": "transform", "equation": "-$..~~.height$/2"},
-        {"class": "FC", "tag": "dx", "low": 10, "high": 10},
+        {"class": "FC", "tag": "dx", "low": 25, "high": 25},
         {"class": "FE", "tag": "length", "equation": "$..~~.dx$*$..~~.number$"}]},
       {"class": "A", "tag": "rock", "sub_actions": [
         {"class": "FC", "tag": "dx", "low": 25, "high": 25},

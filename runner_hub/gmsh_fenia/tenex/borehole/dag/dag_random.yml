@@ -1,0 +1,21 @@
+# Samplers https://optuna.readthedocs.io/en/stable/reference/samplers.html
+# Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
+data:
+  class: Optuna
+  n_trials: 2
+  work_path: work
+  storage: sqlite:///work.db
+  study: tenex_borehole
+  copies: [gmsh, fenia]
+  sampler: RandomSampler
+  sampler_kwargs:
+    seed: ~
+  pruner: NopPruner
+  sub_actions: [/gmsh.json, /fenia.json]
+  objectives:
+    ~~.gmsh.output.mesh.elements: minimize
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+    ~~.fenia.output.heat.temperature.max: minimize
+  constraints:
+    - ~~.gmsh.input.geometry.borehole.constraint
+    - ~~.gmsh.output.mesh.jacobian.min.min.constraint

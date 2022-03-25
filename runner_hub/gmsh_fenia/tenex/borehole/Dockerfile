@@ -1,6 +1,6 @@
-# ==============================
-# FENIA Dockerfile February 2022
-# ==============================
+# ===========================
+# FENIA Dockerfile March 2022
+# ===========================
 # Best practives for writing Dockerfiles
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 # About multi-stage builds
@@ -40,7 +40,7 @@ ARG PETSC_DIR=$ROOT_DIR/petsc
 ARG SLEPC_DIR=$ROOT_DIR/slepc
 ARG FENIA_DIR=$ROOT_DIR/OpenFEM-0.0.x
 ARG TZ=Europe/Moscow
-ARG GMSH_DIR=$ROOT_DIR/gmsh
+# ARG GMSH_DIR=$ROOT_DIR/gmsh
 
 # --------------
 # 1. BUILD STAGE
@@ -109,10 +109,10 @@ WORKDIR $ROOT_DIR
 ENV PATH=$FENIA_DIR/build/bin:$PATH
 ENV LD_LIBRARY_PATH=$FENIA_DIR/build/lib:$LD_LIBRARY_PATH
 
-# GMSH
-ARG GMSH_DIR
-ENV GMSH_DIR=$GMSH_DIR
-RUN git clone https://github.com/romanzes637/gmsh_scripts.git $GMSH_DIR
+# # GMSH
+# ARG GMSH_DIR
+# ENV GMSH_DIR=$GMSH_DIR
+# RUN git clone https://github.com/romanzes637/gmsh_scripts.git $GMSH_DIR
 
 # --------------
 # 2. BUILT STAGE
@@ -129,8 +129,8 @@ ENV SLEPC_DIR=$SLEPC_DIR
 ARG FENIA_DIR
 ENV FENIA_DIR=$FENIA_DIR
 
-ARG GMSH_DIR
-ENV GMSH_DIR=$GMSH_DIR
+# ARG GMSH_DIR
+# ENV GMSH_DIR=$GMSH_DIR
 
 ENV LD_LIBRARY_PATH=$PETSC_DIR/$PETSC_ARCH/lib:$LD_LIBRARY_PATH
 ENV LD_LIBRARY_PATH=$SLEPC_DIR/$PETSC_ARCH/lib:$LD_LIBRARY_PATH
@@ -142,7 +142,7 @@ COPY --from=builder $SLEPC_DIR/$PETSC_ARCH/lib $SLEPC_DIR/$PETSC_ARCH/lib
 COPY --from=builder $FENIA_DIR/build/bin $FENIA_DIR/build/bin
 COPY --from=builder $FENIA_DIR/build/lib $FENIA_DIR/build/lib
 COPY --from=builder $FENIA_DIR/etc $FENIA_DIR/etc
-COPY --from=builder $GMSH_DIR $GMSH_DIR
+# COPY --from=builder $GMSH_DIR $GMSH_DIR
 
 # GMSH
 # libxcursor1 - OSError: libXcursor.so.1: cannot open shared object file: No such file or directory
@@ -164,6 +164,9 @@ RUN apt-get update && apt-get install -y \
     python-is-python3 \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR $GMSH_DIR
-RUN pip3 install --no-cache-dir -r requirements_ml.txt
-RUN pip3 install --no-cache-dir -r requirements_postgres.txt
+RUN pip3 install --no-cache-dir mltrip-runner
+RUN pip3 install --no-cache-dir gmsh-scripts
+
+COPY dag /dag
+WORKDIR /dag
+CMD ["python", "-m", "runner", "dag.yml"]

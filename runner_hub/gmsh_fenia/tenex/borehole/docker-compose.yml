@@ -1,12 +1,12 @@
 version: "3.8"
 services:
-  opt:
+  dag:
     image: 10.254.55.75/fenia_gmsh
     build: .
-    working_dir: /opt/gmsh/test/ml/optuna_gmsh_fenia_sqlite
-    command: ["python", "/opt/gmsh/ml.py", "opt.json"]
+    working_dir: /dag
+    command: ["python", "-m", "runner", "dag.yml"]
     volumes:
-      - tenex:/opt/gmsh/test/ml/optuna_gmsh_fenia_sqlite/opt
+      - tenex:/dag/work
     deploy:
       mode: replicated
       replicas: 2

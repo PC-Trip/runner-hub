@@ -15,7 +15,7 @@
         {"class": "A", "tag": "cast_iron", "sub_actions": [
           {"class": "FC", "tag": "density", "low": 7000, "high": 7400},
           {"class": "FC", "tag": "capacity", "low": 440, "high": 540},
-          {"class": "FC", "tag": "conductivity", "low": 44.0, "high": 46.0},
+          {"class": "FC", "tag": "conductivity", "low": 44, "high": 46},
           {"class": "A", "tag": "temperature", "sub_actions": [
             {"class": "FC", "tag": "initial", "low": 100, "high": 130}]}]},
         {"class": "A", "tag": "ebs", "sub_actions": [

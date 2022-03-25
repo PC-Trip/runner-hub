@@ -5,5 +5,7 @@
     "/check_mesh.json",
     "/input_fenia.json",
     "/run_fenia.json",
-    "/output_fenia.json"]}
+    "/fenia_points",
+    "/output_fenia.json"
+  ]}
 }
