@@ -50,7 +50,9 @@ docker-compose up --build --no-start
 Docker Run
 ==========
 docker-compose up
-docker-compose -f docker-compose.yml up 
+docker-compose -f docker-compose.yml up
+# If you are in the parent directory of a dag directory
+docker run -d -v $(pwd)/dag:/dag 10.254.55.75/fenia_gmsh:latest INPUT_FILE
 
 ========================
 Docker Run Interactive
