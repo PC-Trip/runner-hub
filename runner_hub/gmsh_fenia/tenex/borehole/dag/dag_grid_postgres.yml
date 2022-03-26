@@ -7,6 +7,9 @@ data:
   storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
   study: tenex_borehole_1
   copies: [gmsh, fenia]
+  do_delete_study: false
+  do_optimize: true
+  do_clean_trial: false
   sampler: GridSampler
   sampler_kwargs:
     search_space:
@@ -39,9 +42,9 @@ data:
       ~~.gmsh.input.geometry.cast_iron.dh: [0.235]
       ~~.gmsh.input.geometry.cast_iron.dr: [0.235]
       ~~.gmsh.input.geometry.container.number: [40]
-      ~~.gmsh.input.geometry.container.per_borehole: [3, 5, 10]
-      ~~.gmsh.input.geometry.ebs.dh: [0.25, 0.5, 1.0]
-      ~~.gmsh.input.geometry.ebs.dr: [0.25, 0.5, 1.0]
+      ~~.gmsh.input.geometry.container.per_borehole: [1, 2, 4, 10, 20]
+      ~~.gmsh.input.geometry.ebs.dh: [0.25, 0.5, 1.0, 5.0, 10.0]
+      ~~.gmsh.input.geometry.ebs.dr: [0.25, 0.5, 1.0, 2.5]
       ~~.gmsh.input.geometry.filling.height: [5.030]
       ~~.gmsh.input.geometry.filling.radius: [1.215]
       ~~.gmsh.input.geometry.rock.dnz: [50.0]
@@ -55,7 +58,7 @@ data:
       ~~.gmsh.input.size.factor: [0.75, 1.0]
       ~~.gmsh.input.size.filling: [0.5]
       ~~.gmsh.input.size.max: [10.0]
-      ~~.gmsh.input.size.min: [1.0]
+      ~~.gmsh.input.size.min: [0.5]
       ~~.gmsh.input.size.rock: [5.0]
   pruner: NopPruner
   sub_actions: [/gmsh.yml, /fenia.yml]

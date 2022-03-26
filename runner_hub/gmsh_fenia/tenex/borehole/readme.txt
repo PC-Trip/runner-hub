@@ -36,6 +36,8 @@ https://docs.docker.com/compose/gettingstarted/
 # docker-compose up
 Builds, (re)creates, starts, and attaches to containers for a service.
 https://docs.docker.com/compose/reference/up/
+# memory/cpu
+https://docs.docker.com/config/containers/resource_constraints/
 
 ============
 Docker Build
