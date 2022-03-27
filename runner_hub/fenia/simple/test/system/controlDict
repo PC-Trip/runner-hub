@@ -12,31 +12,25 @@ FeniaFile
 
 application     icoFoam;
 
-startFrom       latestTime;
+startFrom       startTime;
 
 startTime       0;
 
 stopAt          endTime;
 
-endTime         8640000000.0; //86400 //8640000000 ~ 274 years //8640000 ~ 0.274 of year
+endTime         86400000000.0; //17280000.7;
 
-deltaT          3600.0;  // 3600.0;
+deltaT          86400.0;
 
-dtMin           3600.0;  //86400.0; //432000.0;
+dtMin          86400.0;  //86400.0; //432000.0;
 
-dtMax           864000000.0;  //86400.0; //432000.0;
+dtMax          8640000000.0;  //86400.0; //432000.0;
 
-dtIncrDecr      1.5;  // 1.2
-
-rDelta          0.000001;  // tolerance
-
-nIncrDecr       3;  // 5
+nIncrDecr       5;
 
 writeControl    timeStep;
 
-writeInterval   5;
-
-volToPoint      true;
+writeInterval   100;
 
 nodePoint	points;
 
@@ -44,7 +38,7 @@ purgeWrite      0;
 
 writeFormat     ascii;
 
-writePrecision  12;
+writePrecision  6;
 
 writeCompression off;
 

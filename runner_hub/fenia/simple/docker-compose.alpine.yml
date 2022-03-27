@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  fenia:
+    image: 10.254.55.75/fenia_alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.apline
+#    volumes:
+#      - fenia:/work
+
+# volumes:
+#   fenia:
+

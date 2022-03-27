@@ -1,0 +1,1 @@
+docker save --output fenia_latest.tar.gz 10.254.55.75/fenia:latest

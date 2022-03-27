@@ -1,0 +1,19 @@
+FeniaFile
+{
+    version     2.0;
+    format      ascii;
+    class       wordListList; //wordList;  //labelListCompactList; //labelListList;  //labelListCompactList
+    location    "constant/polyMesh";
+    object      faces;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+1
+(
+2(T M1)
+)
+
+
+
+// ************************************************************************* //

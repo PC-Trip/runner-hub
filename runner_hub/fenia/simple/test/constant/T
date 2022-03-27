@@ -1,0 +1,44 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+\*---------------------------------------------------------------------------*/
+FeniaFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      condition;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+    
+    front
+    {
+        type            default;
+    }
+    down
+    {
+        type            default;
+    }
+    left
+    {
+        type            default;
+    }
+    back
+    {
+        type            timeValueTr;
+        timeValueTr constant  9.0;
+//        type            convectionFlux;
+//        TRef            9.0;
+//        heatTrans       300;
+    }
+    up
+    {
+        type            timeValueTr;
+        timeValueTr constant  9.0;
+    }
+    right
+    {
+        type            timeValueTr;
+        timeValueTr constant  9.0;
+    }
+    
+// ************************************************************************* //

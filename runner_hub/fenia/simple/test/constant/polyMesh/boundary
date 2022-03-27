@@ -1,0 +1,57 @@
+FeniaFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    front
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       2700;
+    }
+    down
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       2800;
+    }
+    left
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       2900;
+    }
+    back
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       3000;
+    }
+    up
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       3100;
+    }
+    right
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          100;
+        startFace       3200;
+    }
+)
+
+// ************************************************************************* //

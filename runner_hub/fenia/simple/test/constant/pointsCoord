@@ -1,0 +1,13 @@
+FeniaFile
+{
+    version     2.0;
+    format      ascii;
+    class       vectorList;  //labelListCompactList; //labelListList;  //labelListCompactList
+    location    constant;
+    object      pointCoord;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+4((0.199 0.0 0.0) (0.4156 0.0 0.0) (0.9079 0.0 0.0) (2.182 0.0 0.0));
+
+// ************************************************************************* //
