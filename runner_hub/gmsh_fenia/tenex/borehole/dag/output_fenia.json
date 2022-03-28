@@ -8,48 +8,48 @@
         {"class": "A", "tag": "rock", "sub_actions": [
           {"class": "A", "tag": "max", "sub_actions": [
             {"class": "FR", "tag": "value", "input_path": "fenia/zoneMaxT", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 1},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 2},
             {"class": "FR", "tag": "x", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 1},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 2},
             {"class": "FR", "tag": "y", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 2},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 3},
             {"class": "FR", "tag": "z", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 3}]}]},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 4}]}]},
         {"class": "A", "tag": "filling", "sub_actions": [
           {"class": "A", "tag": "max", "sub_actions": [
             {"class": "FR", "tag": "value", "input_path": "fenia/zoneMaxT", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 2},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 3},
             {"class": "FR", "tag": "x", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 4},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 5},
             {"class": "FR", "tag": "y", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 5},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 6},
             {"class": "FR", "tag": "z", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 6}]}]},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 7}]}]},
         {"class": "A", "tag": "ebs", "sub_actions": [
           {"class": "A", "tag": "max", "sub_actions": [
             {"class": "FR", "tag": "value", "input_path": "fenia/zoneMaxT", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 3},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 4},
             {"class": "FR", "tag": "x", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 7},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 8},
             {"class": "FR", "tag": "y", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 8},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 9},
             {"class": "FR", "tag": "z", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 9}]}]},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 10}]}]},
         {"class": "A", "tag": "cast_iron", "sub_actions": [
           {"class": "A", "tag": "max", "sub_actions": [
             {"class": "FR", "tag": "value", "input_path": "fenia/zoneMaxT", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 4},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 5},
             {"class": "FR", "tag": "x", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 10},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 11},
             {"class": "FR", "tag": "y", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 11},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 12},
             {"class": "FR", "tag": "z", "input_path": "fenia/zoneMaxPoint", "value_type": "float", "read_type": "all",
-              "pattern": "-?\\d+\\.\\d+", "index": 12}]}]},
+              "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 13}]}]},
         {"class": "FE", "tag": "max",
           "equation": "max([$..~~.rock.max.value$, $..~~.filling.max.value$, $..~~.ebs.max.value$, $..~~.cast_iron.max.value$])"},
         {"class": "A", "tag": "point", "sub_actions": [
           {"class": "FR", "tag": "ground", "input_path": "fenia/T", "value_type": "float", "read_type": "line",
-            "pattern": "-?\\d+\\.?\\d*", "index": null, "line_index": 2, "line_start": 14, "sub_actions": [
+            "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": null, "line_index": 2, "line_start": 14, "sub_actions": [
             {"class": "FE", "tag": "max", "equation": "np.max($..~~$)"},
             {"class": "FE", "tag": "min", "equation": "np.min($..~~$)"},
             {"class": "FE", "tag": "mean", "equation": "np.mean($..~~$)"},
@@ -59,11 +59,11 @@
             {"class": "SV", "value": null}]}]}]},
       {"class": "A", "tag": "volume", "sub_actions": [
         {"class": "FR", "tag": "rock", "input_path": "fenia/zoneVol", "value_type": "float", "read_type": "all",
-          "pattern": "-?\\d+\\.\\d+", "index": 1},
+          "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 2},
         {"class": "FR", "tag": "filling", "input_path": "fenia/zoneVol", "value_type": "float", "read_type": "all",
-          "pattern": "-?\\d+\\.\\d+", "index": 2},
+          "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 3},
         {"class": "FR", "tag": "ebs", "input_path": "fenia/zoneVol", "value_type": "float", "read_type": "all",
-          "pattern": "-?\\d+\\.\\d+", "index": 3},
+          "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 4},
         {"class": "FR", "tag": "cast_iron", "input_path": "fenia/zoneVol", "value_type": "float", "read_type": "all",
-          "pattern": "-?\\d+\\.\\d+", "index": 4}]}]}]}
+          "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": 5}]}]}]}
 }

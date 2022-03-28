@@ -48,5 +48,9 @@ timePrecision   12;
 
 runTimeModifiable true;
 
+secondaryWriteControl    timeStep;
+
+secondaryWriteInterval   200;
+
 
 // ************************************************************************* //
