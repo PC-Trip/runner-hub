@@ -1,10 +1,10 @@
 version: "3.8"
 services:
   dag:
-    image: 10.254.55.75/test
+    image: 10.254.55.75/fenia_gmsh
     build:
       context: .
-      dockerfile: Dockerfile.test
+      dockerfile: Dockerfile
 #    volumes:
 #      - tenex:/dag/work
 #    deploy:

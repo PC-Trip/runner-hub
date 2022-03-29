@@ -2,14 +2,14 @@
 # Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
 data:
   class: Optuna
-  n_trials: 100
+  n_trials: 1
   work_path: work
   storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
   study: tenex_borehole_1
   copies: [gmsh, fenia]
   do_delete_study: false
   do_optimize: true
-  do_clean_trial: false
+  do_clean_trial: true
   sampler: GridSampler
   sampler_kwargs:
     search_space:
@@ -53,13 +53,13 @@ data:
       ~~.gmsh.input.geometry.rock.dz: [25.0, 50.0, 100.0]
       ~~.gmsh.input.size.boundary: [2]
       ~~.gmsh.input.size.cast_iron: [0.5]
-      ~~.gmsh.input.size.curvature: [100.0]
+      ~~.gmsh.input.size.curvature: [50.0]
       ~~.gmsh.input.size.ebs: [0.5]
       ~~.gmsh.input.size.factor: [0.75, 1.0]
       ~~.gmsh.input.size.filling: [0.5]
-      ~~.gmsh.input.size.max: [10.0]
-      ~~.gmsh.input.size.min: [0.5]
-      ~~.gmsh.input.size.rock: [5.0]
+      ~~.gmsh.input.size.max: [75.0]
+      ~~.gmsh.input.size.min: [0.1]
+      ~~.gmsh.input.size.rock: [50.0]
   pruner: NopPruner
   sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:

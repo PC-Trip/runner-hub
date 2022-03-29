@@ -6,5 +6,5 @@ data:
     - /check_mesh.json
     - /input_fenia.json
     - /run_fenia.json
-    - /fenia_points.json
+#    - /fenia_points.json
     - /output_fenia.json

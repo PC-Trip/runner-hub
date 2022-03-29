@@ -1,10 +1,11 @@
 version: "3.8"
 services:
   dag:
-    image: 10.254.55.75/fenia_gmsh_tenex_borehole_dag_grid_postgres
+    image: 10.254.55.75/fenia_gmsh_tenex_borehole
     build:
       context: .
-      dockerfile: Dockerfile.grid.postgres
+      dockerfile: Dockerfile.tenex.borehole
+    command: dag_grid_postgres.yml
     volumes:
       - tenex:/dag/work
     deploy:
@@ -15,10 +16,10 @@ services:
 #      resources:
 #        limits:
 #          cpus: '1.0'
-#          memory: 8g
+#          memory: 16g
 #        reservations:
 #          cpus: '1.0'
-#          memory: 4g
+#          memory: 14g
 
 
 volumes:

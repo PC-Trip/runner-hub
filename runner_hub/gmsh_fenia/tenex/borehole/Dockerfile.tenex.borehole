@@ -170,4 +170,4 @@ RUN pip3 install --no-cache-dir gmsh-scripts
 WORKDIR /dag
 COPY dag .
 ENTRYPOINT ["python", "-m", "runner"]
-CMD ["dag_grid_postgres.yml"]
+CMD ["dag.yml"]

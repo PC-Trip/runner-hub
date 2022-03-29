@@ -48,7 +48,7 @@
         {"class": "FE", "tag": "max",
           "equation": "max([$..~~.rock.max.value$, $..~~.filling.max.value$, $..~~.ebs.max.value$, $..~~.cast_iron.max.value$])"},
         {"class": "A", "tag": "point", "sub_actions": [
-          {"class": "FR", "tag": "ground", "input_path": "fenia/T", "value_type": "float", "read_type": "line",
+          {"class": "FR", "tag": "ground", "input_path": "fenia/Tp", "value_type": "float", "read_type": "line",
             "pattern": "[-+]?[0-9]+\\.?[0-9]*[eE]?[-+]?[0-9]*", "index": null, "line_index": 2, "line_start": 14, "sub_actions": [
             {"class": "FE", "tag": "max", "equation": "np.max($..~~$)"},
             {"class": "FE", "tag": "min", "equation": "np.min($..~~$)"},

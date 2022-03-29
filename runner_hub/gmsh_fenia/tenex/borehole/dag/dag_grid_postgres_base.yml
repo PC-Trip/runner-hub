@@ -53,13 +53,13 @@ data:
       ~~.gmsh.input.geometry.rock.dz: [50.0]
       ~~.gmsh.input.size.boundary: [2]
       ~~.gmsh.input.size.cast_iron: [0.5]
-      ~~.gmsh.input.size.curvature: [100.0]
+      ~~.gmsh.input.size.curvature: [50.0]
       ~~.gmsh.input.size.ebs: [0.5]
       ~~.gmsh.input.size.factor: [1.0]
       ~~.gmsh.input.size.filling: [0.5]
-      ~~.gmsh.input.size.max: [10.0]
+      ~~.gmsh.input.size.max: [100.0]
       ~~.gmsh.input.size.min: [0.5]
-      ~~.gmsh.input.size.rock: [5.0]
+      ~~.gmsh.input.size.rock: [10.0]
   pruner: NopPruner
   sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:

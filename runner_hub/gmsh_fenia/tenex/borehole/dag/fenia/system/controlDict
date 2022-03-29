@@ -20,9 +20,9 @@ stopAt          endTime;
 
 endTime         8640000000.0; //86400 //8640000000 ~ 274 years //8640000 ~ 0.274 of year
 
-deltaT          3600.0;  // 3600.0;
+deltaT          86400.0;  // 3600.0;
 
-dtMin           3600.0;  //86400.0; //432000.0;
+dtMin           86400.0;  //86400.0; //432000.0;
 
 dtMax           864000000.0;  //86400.0; //432000.0;
 
@@ -53,6 +53,10 @@ timeFormat      general;
 timePrecision   12;
 
 runTimeModifiable true;
+
+secondaryWriteControl    timeStep;
+
+secondaryWriteInterval   5;
 
 
 // ************************************************************************* //
