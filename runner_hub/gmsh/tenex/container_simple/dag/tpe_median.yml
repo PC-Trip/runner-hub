@@ -1,0 +1,33 @@
+# samplers https://optuna.readthedocs.io/en/stable/reference/samplers.html,
+# pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
+data:
+  class: Optuna
+  n_trials: 1
+  work_path: work
+  storage: sqlite:///work.db
+  study: container_simple
+  copies: [gmsh]
+  sampler: TPESampler
+  sampler_kwargs:
+    consider_prior: Yes
+    prior_weight: 1.0
+    consider_magic_clip: Yes
+    consider_endpoints: No
+    n_startup_trials: 10
+    n_ei_candidates: 24
+    seed: ~
+    multivariate: No
+    group: No
+    warn_independent_sampling: Yes
+    constant_liar: No
+  pruner: MedianPruner
+  pruner_kwargs:
+    n_startup_trials: 5
+    n_warmup_steps: 0
+    interval_steps: 1
+    n_min_trials: 1
+  sub_actions: [/gmsh.yml]
+  objectives:
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+  constraints:
+    - ~~.output.mesh.jacobian.min.min.constraint

@@ -1,0 +1,7 @@
+data:
+  class: A
+  tag: gmsh
+  sub_actions:
+    - /input.yml
+    - /run.yml
+    - /output.yml

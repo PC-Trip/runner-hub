@@ -1,0 +1,15 @@
+data:
+  class: Optuna
+  n_trials: 1
+  work_path: work
+  storage: sqlite:///work.db
+  study: container_simple
+  copies: [gmsh]
+  do_optimize: No
+  do_sub_call: Yes
+  do_update: Yes
+  sub_actions: [/gmsh.yml]
+  objectives:
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+  constraints:
+    - ~~.output.mesh.jacobian.min.min.constraint

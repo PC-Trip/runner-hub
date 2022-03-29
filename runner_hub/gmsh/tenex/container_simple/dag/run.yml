@@ -1,0 +1,22 @@
+data:
+  class: P
+  tag: run
+  subprocess_kwargs: 
+    args: 
+      - D:\\runner-hub\\venv\\Scripts\\python.exe
+      - -m
+      - gmsh_scripts
+      - container.json
+      - -f
+      - msh2
+      - -o
+      - mesh
+      - -l
+      - gmsh.log
+      - -v
+      - DEBUG
+    cwd: gmsh
+    stdout: gmsh/gmsh.out
+    stderr: gmsh/gmsh.err
+      
+  
