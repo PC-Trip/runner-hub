@@ -16,5 +16,5 @@
 # '!' lines starting with ! (exclamation mark) can be used to make exceptions to exclusions
 # '#' lines starting with this character are ignored: use it for comments
 
-
-tenex/**
+*
+!OpenFEM-0.0.x
