@@ -1,0 +1,1 @@
+docker stack deploy --compose-file docker-compose.fixed.postgres.yml tenex_borehole_fixed

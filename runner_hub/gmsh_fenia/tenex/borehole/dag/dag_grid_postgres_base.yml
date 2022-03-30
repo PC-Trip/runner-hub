@@ -59,7 +59,7 @@ data:
       ~~.gmsh.input.size.filling: [0.5]
       ~~.gmsh.input.size.max: [100.0]
       ~~.gmsh.input.size.min: [0.5]
-      ~~.gmsh.input.size.rock: [10.0]
+      ~~.gmsh.input.size.rock: [1.0]
   pruner: NopPruner
   sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:

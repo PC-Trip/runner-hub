@@ -16,7 +16,7 @@
       {"class": "FC", "tag": "cast_iron", "low": 0.1, "high": 0.5},
       {"class": "FC", "tag": "filling", "low": 0.1, "high": 0.5},
       {"class": "FC", "tag": "ebs", "low": 0.1, "high": 0.5},
-      {"class": "FC", "tag": "rock", "low": 5, "high": 100}]},
+      {"class": "FC", "tag": "rock", "low": 1, "high": 100}]},
     {"class": "A", "tag": "geometry", "sub_actions": [
       {"class": "A", "tag": "filling", "sub_actions": [
         {"class": "FC", "tag": "height", "low": 5.030, "high": 5.030},

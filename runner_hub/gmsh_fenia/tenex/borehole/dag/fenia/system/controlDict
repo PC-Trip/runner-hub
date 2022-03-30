@@ -26,11 +26,11 @@ dtMin           86400.0;  //86400.0; //432000.0;
 
 dtMax           864000000.0;  //86400.0; //432000.0;
 
-dtIncrDecr      1.5;  // 1.2
+dtIncrDecr      1.5;  // new_dt = old_dt*dtIncrDecr OR old_dt/dtIncrDecr
 
 rDelta          0.000001;  // tolerance
 
-nIncrDecr       3;  // 5
+nIncrDecr       3;  // IF cur_err + cur_err*rDelta < prev_err for nIncrDecr steps THEN new_dt = old_dt*dtIncrDecr
 
 writeControl    timeStep;
 

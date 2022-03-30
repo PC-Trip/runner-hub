@@ -3,7 +3,7 @@ services:
   dag:
     image: 10.254.55.75/gmsh_fenia
     working_dir: /opt/runner-hub/runner_hub/gmsh_fenia/tenex/borehole/dag
-    command: dag_grid_postgres.yml
+    command: dag_grid_postgres_fixed.yml
     volumes:
       - tenex:/opt/runner-hub/runner_hub/gmsh_fenia/tenex/borehole/dag/work
     deploy:
@@ -11,15 +11,15 @@ services:
       replicas: 1
       placement:
         max_replicas_per_node: 1
-        constraints:
-          - node.role == worker
-#      resources:
+#         constraints:
+#           - node.role == worker
+      resources:
 #        limits:
 #          cpus: '1.0'
 #          memory: 16g
-#        reservations:
-#          cpus: '1.0'
-#          memory: 14g
+        reservations:
+          cpus: '1.0'
+          memory: 10g
 volumes:
   tenex:
 

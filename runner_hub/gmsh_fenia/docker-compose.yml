@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  dag:
+    image: 10.254.55.75/gmsh_fenia
+    build:
+      context: .
+      dockerfile: Dockerfile

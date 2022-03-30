@@ -17,4 +17,4 @@
 # '#' lines starting with this character are ignored: use it for comments
 
 
-./dag/work/**
+tenex/**
