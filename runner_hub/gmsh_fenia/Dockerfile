@@ -111,6 +111,8 @@ WORKDIR $ROOT_DIR
 ENV PATH=$FENIA_DIR/build/bin:$PATH
 ENV LD_LIBRARY_PATH=$FENIA_DIR/build/lib:$LD_LIBRARY_PATH
 
+ARG UPDATE_RUNNER_HUB=0
+ARG UPDATE_APP=0
 # --------------------
 # 2. APPLICATION STAGE
 # --------------------
@@ -141,7 +143,7 @@ COPY --from=builder $FENIA_DIR/build/bin $FENIA_DIR/build/bin
 COPY --from=builder $FENIA_DIR/build/lib $FENIA_DIR/build/lib
 COPY --from=builder $FENIA_DIR/etc $FENIA_DIR/etc
 
-ARG UPDATE_APP=0
+ARG UPDATE_APP
 # APT
 # libxcursor1 - OSError: libXcursor.so.1: cannot open shared object file: No such file or directory
 # libxft2 - OSError: libXft.so.2: cannot open shared object file: No such file or directory
@@ -165,7 +167,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install --no-cache-dir mltrip-runner
 RUN pip3 install --no-cache-dir gmsh-scripts
 
-ARG UPDATE_RUNNER_HUB=0
+ARG UPDATE_RUNNER_HUB
 RUN git clone https://github.com/PC-Trip/runner-hub.git $RUNNER_HUB_DIR
 
 WORKDIR $RUNNER_HUB_DIR/runner_hub/gmsh_fenia

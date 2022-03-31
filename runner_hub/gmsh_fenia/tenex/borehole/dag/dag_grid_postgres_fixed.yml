@@ -13,7 +13,7 @@ data:
   sampler: PartialFixedSampler
   sampler_kwargs:
     fixed_params:
-      ~~.gmsh.input.geometry.rock.dz: 50.0
+#      ~~.gmsh.input.geometry.rock.dz: 50.0
       ~~.gmsh.input.geometry.container.per_borehole: 10
       ~~.gmsh.input.size.factor: 1.0
       ~~.gmsh.input.size.curvature: 30.0
@@ -46,7 +46,7 @@ data:
         ~~.fenia.input.heat.property.rock.density: [2700.0]
         ~~.gmsh.input.algorithm.2d: [6]
         ~~.gmsh.input.algorithm.3d: [1]
-        ~~.gmsh.input.geometry.borehole.dx: [10.0, 25.0, 50.0]
+        ~~.gmsh.input.geometry.borehole.dx: [10.0, 25.0, 50.0, 100.0]
         ~~.gmsh.input.geometry.cast_iron.dh: [0.235]
         ~~.gmsh.input.geometry.cast_iron.dr: [0.235]
         ~~.gmsh.input.geometry.container.number: [40]
@@ -67,7 +67,7 @@ data:
         ~~.gmsh.input.size.filling: [0.5]
         ~~.gmsh.input.size.max: [75.0]
         ~~.gmsh.input.size.min: [0.1]
-        ~~.gmsh.input.size.rock: [50.0]
+        ~~.gmsh.input.size.rock: [25.0, 50.0]
   pruner: NopPruner
   sub_actions: [/gmsh.yml, /fenia.yml]
   objectives:
