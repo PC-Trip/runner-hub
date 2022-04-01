@@ -6,7 +6,7 @@ data:
   work_path: work
   storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
   study: tenex_borehole_1
-  copies: [gmsh, fenia]
+  copies: [ gmsh, fenia ]
   do_delete_study: false
   do_optimize: true
   do_clean_trial: true
@@ -36,8 +36,8 @@ data:
       ~~.fenia.input.heat.property.rock.capacity: 840.0
       ~~.fenia.input.heat.property.rock.conductivity: 1.8
       ~~.fenia.input.heat.property.rock.density: 2700.0
-      ~~.gmsh.input.algorithm.2d: 6
-      ~~.gmsh.input.algorithm.3d: 1
+      #      ~~.gmsh.input.algorithm.2d: 6
+      #      ~~.gmsh.input.algorithm.3d: 1
       ~~.gmsh.input.geometry.container.per_borehole: 10
       ~~.gmsh.input.geometry.cast_iron.dh: 0.235
       ~~.gmsh.input.geometry.cast_iron.dr: 0.235
@@ -59,13 +59,15 @@ data:
     base_sampler: GridSampler
     base_sampler_kwargs:
       search_space:
-        ~~.gmsh.input.geometry.borehole.dx: [10.0, 25.0, 50.0, 75.0, 100.0]
-        ~~.gmsh.input.geometry.ebs.dh: [0.125, 0.25, 0.5, 2.250]
-        ~~.gmsh.input.geometry.ebs.dr: [0.25, 0.5, 1.0, 2.5]
-        ~~.gmsh.input.geometry.rock.dz: [25.0, 75.0, 100.0]
-        ~~.gmsh.input.size.rock: [20.0, 25.0, 50.0]
+        ~~.gmsh.input.algorithm.2d: [ 1, 2, 5, 6 ]
+        ~~.gmsh.input.algorithm.3d: [ 1, 4, 9, 10 ]
+        ~~.gmsh.input.geometry.borehole.dx: [ 5.0, 10.0, 15.0, 20.0, 30.0, 40.0 ]
+        ~~.gmsh.input.geometry.ebs.dh: [ 0.5, 1.0 ]
+        ~~.gmsh.input.geometry.ebs.dr: [ 0.5, 1.0 ]
+        ~~.gmsh.input.geometry.rock.dz: [ 25.0, 100.0 ]
+        ~~.gmsh.input.size.rock: [ 10.0, 20.0 ]
   pruner: NopPruner
-  sub_actions: [/gmsh.yml, /fenia.yml]
+  sub_actions: [ /gmsh.yml, /fenia.yml ]
   objectives:
     ~~.gmsh.output.mesh.elements: minimize
     ~~.gmsh.output.mesh.metric.ige.min: maximize
