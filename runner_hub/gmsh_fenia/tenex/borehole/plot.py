@@ -11,6 +11,75 @@ from matplotlib.tri import Triangulation, UniformTriRefiner, LinearTriInterpolat
     CubicTriInterpolator
 from plotly.figure_factory import create_trisurf
 import plotly.graph_objects as go
+import plotly.express as px
+
+
+def plot_time(input_path):
+    p = Path(input_path)
+    df = get_data(input_path)
+    df['total'] = df['datetime_complete'] - df['datetime_start']
+    df = df.astype({'total': 'timedelta64[s]'})
+    df['fenia.output.time.total'] = df['total'] - df['gmsh.output.time.total']
+    ts = ['total',
+          'fenia.output.time.total',
+          'gmsh.output.time.total',
+          'gmsh.output.time.generate',
+          'gmsh.output.time.register',
+          'gmsh.output.time.boolean',
+          'gmsh.output.time.optimize',
+          'gmsh.output.time.write',
+          'gmsh.output.time.transform',
+          'gmsh.output.time.zone',
+          'gmsh.output.time.synchronize',
+          'gmsh.output.time.structure',
+          'gmsh.output.time.pre_unregister',
+          'gmsh.output.time.quadrate',
+          'gmsh.output.time.refine',
+          'gmsh.output.time.size',
+          'gmsh.output.time.smooth']
+    df = df.melt(var_name='time',
+                 id_vars=['number',
+                          'gmsh.output.mesh.elements',
+                          'gmsh.output.mesh.nodes',
+                          'gmsh.input.algorithm.2d',
+                          'gmsh.input.algorithm.3d',
+                          'gmsh.output.mesh.metric.icn.min',
+                          'gmsh.output.mesh.metric.ige.min'
+                          ],
+                 value_vars=ts,
+                 value_name='value')
+    df['value'] /= 3600
+    sns.set(style="ticks")
+    g = sns.catplot(x="value", y="time",
+                    kind="boxen", data=df,
+                    # scale='width',
+                    height=8, aspect=1.777)
+    g.set(xscale="log")
+    g.set_xlabels(label='hours')
+    g.set_yticklabels(labels=[x.replace('.output.time', '') for x in ts])
+    plt.grid()  # just add this
+    g.savefig(p.with_name('time').with_suffix('.png'))
+
+    fig = px.box(df, x="value", y="time", log_x=True,
+                 hover_data=['number',
+                             'time',
+                             'value',
+                             'gmsh.output.mesh.elements',
+                             'gmsh.output.mesh.nodes',
+                             'gmsh.input.algorithm.2d',
+                             'gmsh.input.algorithm.3d',
+                             'gmsh.output.mesh.metric.icn.min',
+                             'gmsh.output.mesh.metric.ige.min'
+                             ], color="time",
+                 labels={
+                     "value": "hours",
+                 }
+                 # , box=True
+
+                 )
+    fig.update_layout(yaxis_visible=False, yaxis_showticklabels=False)
+
+    fig.write_html(p.with_name(f'time').with_suffix('.html'))
 
 
 def plot_tri(input_path):
@@ -62,14 +131,15 @@ def plot_tri(input_path):
             fig.write_html(p.with_name(f'tri_3d_{k}_{z}').with_suffix('.html'))
             plt.clf()
             plt.contourf(X, Y, Z, levels=10,
-                        cmap=cm.jet, alpha=1,
-                        norm=plt.Normalize(vmax=Z.max(), vmin=Z.min()))
+                         cmap=cm.jet, alpha=1,
+                         norm=plt.Normalize(vmax=Z.max(), vmin=Z.min()))
             plt.plot(xs, ys, 'ko', ms=1)
             plt.colorbar(label=cb_label)
             plt.title(title)
             plt.xlabel(x_label)
             plt.ylabel(y_label)
             plt.savefig(p.with_name(f'tri_2d_{k}_{z}').with_suffix('.png'), bbox_inches='tight')
+
         # Refine
         # refiner = UniformTriRefiner(tri)
         # tri_rf, zs_rf = refiner.refine_field(zs, subdiv=3)
@@ -317,7 +387,10 @@ def get_data(input_path, fixed=None):
     fixed = {} if fixed is None else fixed
     p = Path(input_path)
 
-    df = pd.read_csv(p)
+    df = pd.read_csv(p,
+                     parse_dates=['datetime_start', 'datetime_complete', 'duration'],
+                     # date_parser=lambda x: pd.datetime.strptime(x, '%Y%m%d:%H:%M:%S.%f')
+                     )
 
     df = df.rename(columns={x: x[23:] if x.startswith('user_attrs_features_~~.') else x for x in df.columns})
 
@@ -425,6 +498,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('input_path', help='input path')
     a = vars(parser.parse_args())  # arguments
+    plot_time(**a)
     plot_tri(**a)
     plot_tsne(**a)
     plot_tv(**a)
