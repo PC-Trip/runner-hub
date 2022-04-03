@@ -37,15 +37,18 @@ def plot_time(input_path):
           'gmsh.output.time.refine',
           'gmsh.output.time.size',
           'gmsh.output.time.smooth']
+    ids = ['number',
+           'gmsh.output.mesh.elements',
+           'gmsh.output.mesh.nodes',
+           'gmsh.output.mesh.blocks',
+           'gmsh.output.mesh.volumes',
+           'gmsh.input.algorithm.2d',
+           'gmsh.input.algorithm.3d',
+           'gmsh.output.mesh.metric.icn.min',
+           'gmsh.output.mesh.metric.ige.min'
+           ]
     df = df.melt(var_name='time',
-                 id_vars=['number',
-                          'gmsh.output.mesh.elements',
-                          'gmsh.output.mesh.nodes',
-                          'gmsh.input.algorithm.2d',
-                          'gmsh.input.algorithm.3d',
-                          'gmsh.output.mesh.metric.icn.min',
-                          'gmsh.output.mesh.metric.ige.min'
-                          ],
+                 id_vars=ids,
                  value_vars=ts,
                  value_name='value')
     df['value'] /= 3600
@@ -60,22 +63,13 @@ def plot_time(input_path):
     plt.grid()  # just add this
     g.savefig(p.with_name('time').with_suffix('.png'))
 
+    hover = ids + ['time', 'value']
     fig = px.box(df, x="value", y="time", log_x=True,
-                 hover_data=['number',
-                             'time',
-                             'value',
-                             'gmsh.output.mesh.elements',
-                             'gmsh.output.mesh.nodes',
-                             'gmsh.input.algorithm.2d',
-                             'gmsh.input.algorithm.3d',
-                             'gmsh.output.mesh.metric.icn.min',
-                             'gmsh.output.mesh.metric.ige.min'
-                             ], color="time",
+                 hover_data=hover, color="time",
                  labels={
                      "value": "hours",
                  }
                  # , box=True
-
                  )
     fig.update_layout(yaxis_visible=False, yaxis_showticklabels=False)
 
