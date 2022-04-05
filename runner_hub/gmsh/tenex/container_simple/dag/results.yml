@@ -5,7 +5,7 @@ data:
   storage: sqlite:///work.db
   study: container_simple
   copies: [gmsh]
-  do_optimize: Yes
+  do_optimize: No
   sub_actions: [/gmsh.yml]
   objectives:
     ~~.gmsh.output.mesh.metric.ige.min: maximize
