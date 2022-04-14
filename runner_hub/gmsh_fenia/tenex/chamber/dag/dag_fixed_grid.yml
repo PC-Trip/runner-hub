@@ -42,7 +42,7 @@ data:
       # ~~.gmsh.input.geometry.container.per_borehole: 10
       ~~.gmsh.input.geometry.cast_iron.dh: 0.235
       ~~.gmsh.input.geometry.cast_iron.dr: 0.235
-      ~~.gmsh.input.geometry.container.number: 4
+      ~~.gmsh.input.geometry.container.number: 40
       ~~.gmsh.input.geometry.filling.height: 5.030
       ~~.gmsh.input.geometry.filling.radius: 1.215
       ~~.gmsh.input.geometry.rock.dnz: 50.0
