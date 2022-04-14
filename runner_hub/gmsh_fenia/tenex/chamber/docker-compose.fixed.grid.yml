@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  dag:
+    image: 10.254.55.75/gmsh_fenia
+    working_dir: /opt/runner-hub/runner_hub/gmsh_fenia/tenex/chamber/dag
+    command: dag_fixed_grid.yml
+    volumes:
+      - tenex:/opt/runner-hub/runner_hub/gmsh_fenia/tenex/chamber/dag/work
+#   network_mode: host
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        max_replicas_per_node: 16
+#        constraints:
+#           - node.role == worker
+#           - node.labels.cpu != 4
+      resources:
+#        limits:
+#          cpus: '1.0'
+#          memory: 7.5g  # ~ memory - (max_replicas_per_node-1)*reservations.memory
+        reservations:
+          cpus: '1.0'
+          memory: 3.5g
+volumes:
+  tenex:
+

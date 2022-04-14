@@ -1,0 +1,86 @@
+# Samplers https://optuna.readthedocs.io/en/stable/reference/samplers.html
+# Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
+data:
+  class: Optuna
+  n_trials: 1
+  work_path: work
+  storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
+#  storage: sqlite:///work.db
+  study: tenex_chamber_1
+  copies: [ gmsh, fenia ]
+  do_delete_study: No
+  do_optimize: Yes
+  do_clean_trial: Yes
+  sampler: PartialFixedSampler
+  sampler_kwargs:
+    fixed_params:
+      ~~.fenia.input.heat.condition.boundary.nx.temperature: 9.0
+      ~~.fenia.input.heat.condition.boundary.ny.temperature: 9.0
+      ~~.fenia.input.heat.condition.boundary.nz.temperature: 9.0
+      ~~.fenia.input.heat.condition.boundary.x.temperature: 9.0
+      ~~.fenia.input.heat.condition.boundary.y.temperature: 9.0
+      ~~.fenia.input.heat.condition.boundary.z.temperature: 9.0
+      ~~.fenia.input.heat.condition.initial.temperature: 9.0
+      ~~.fenia.input.heat.property.cast_iron.capacity: 490.0
+      ~~.fenia.input.heat.property.cast_iron.conductivity: 45.0
+      ~~.fenia.input.heat.property.cast_iron.density: 7200.0
+      ~~.fenia.input.heat.property.cast_iron.temperature.initial: 110.0
+      ~~.fenia.input.heat.property.ebs.capacity: 960.0
+      ~~.fenia.input.heat.property.ebs.conductivity: 1.0
+      ~~.fenia.input.heat.property.ebs.density: 1900.0
+      ~~.fenia.input.heat.property.filling.capacity: 830.0
+      ~~.fenia.input.heat.property.filling.conductivity: 1.2
+      ~~.fenia.input.heat.property.filling.density: 2700.0
+      ~~.fenia.input.heat.property.filling.source.value: 1000.0
+      ~~.fenia.input.heat.property.filling.source.exponent: -1364904924.0
+      ~~.fenia.input.heat.property.filling.temperature.initial: 110.0
+      ~~.fenia.input.heat.property.rock.capacity: 840.0
+      ~~.fenia.input.heat.property.rock.conductivity: 1.8
+      ~~.fenia.input.heat.property.rock.density: 2700.0
+      # ~~.gmsh.input.algorithm.2d: 6
+      # ~~.gmsh.input.algorithm.3d: 1
+      # ~~.gmsh.input.geometry.container.per_borehole: 10
+      ~~.gmsh.input.geometry.cast_iron.dh: 0.235
+      ~~.gmsh.input.geometry.cast_iron.dr: 0.235
+      ~~.gmsh.input.geometry.container.number: 4
+      ~~.gmsh.input.geometry.filling.height: 5.030
+      ~~.gmsh.input.geometry.filling.radius: 1.215
+      ~~.gmsh.input.geometry.rock.dnz: 50.0
+      ~~.gmsh.input.geometry.rock.dx: 50.0
+      ~~.gmsh.input.geometry.rock.dy: 50.0
+      ~~.gmsh.input.geometry.rock.dz: 50.0
+      ~~.gmsh.input.size.factor: 1.0
+      ~~.gmsh.input.size.curvature: 30.0
+      # ~~.gmsh.input.size.rock: 25.0
+      ~~.gmsh.input.size.boundary: 2
+      ~~.gmsh.input.size.cast_iron: 0.5
+      ~~.gmsh.input.size.ebs: 0.5
+      ~~.gmsh.input.size.filling: 0.5
+      ~~.gmsh.input.size.max: 75.0
+      ~~.gmsh.input.size.min: 0.1
+    base_sampler: GridSampler
+    base_sampler_kwargs:
+      search_space:
+        ~~.gmsh.input.geometry.container.per_borehole: [ 2, 5, 10 ]
+        ~~.gmsh.input.algorithm.2d: [ 1, 2, 5, 6 ]
+        ~~.gmsh.input.algorithm.3d: [ 1, 4, 9, 10 ]
+        ~~.gmsh.input.geometry.borehole.dx: [ 15.0, 20.0, 30.0, 50.0]
+        ~~.gmsh.input.geometry.borehole.angle: [ 0.0, 30.0, 45.0, 60.0 ]
+        ~~.gmsh.input.geometry.ebs.dh: [ 0.5, 1.0, 2.0 ]
+        ~~.gmsh.input.geometry.ebs.dr: [ 0.5, 1.0, 2.0 ]
+        ~~.gmsh.input.size.rock: [ 10.0, 20.0, 30.0 ]
+#        ~~.gmsh.input.geometry.container.per_borehole: [ 2 ]
+#        ~~.gmsh.input.algorithm.2d: [ 6 ]
+#        ~~.gmsh.input.algorithm.3d: [ 1 ]
+#        ~~.gmsh.input.geometry.borehole.dx: [ 15.0 ]
+#        ~~.gmsh.input.geometry.borehole.angle: [ 0.0 ]
+#        ~~.gmsh.input.geometry.ebs.dh: [ 1.0 ]
+#        ~~.gmsh.input.geometry.ebs.dr: [ 1.0 ]
+#        ~~.gmsh.input.size.rock: [ 30.0 ]
+  pruner: NopPruner
+  sub_actions: [ /gmsh.yml, /fenia.yml ]
+  objectives:
+    ~~.fenia.output.heat.temperature.max: minimize
+  constraints:
+    - ~~.gmsh.input.geometry.borehole.constraint
+    - ~~.gmsh.output.mesh.jacobian.min.min.constraint

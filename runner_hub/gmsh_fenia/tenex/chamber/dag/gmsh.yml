@@ -1,0 +1,7 @@
+data:
+  class: A
+  tag: gmsh
+  sub_actions:
+    - /input_gmsh.json
+    - /run_gmsh.json
+    - /output_gmsh.json

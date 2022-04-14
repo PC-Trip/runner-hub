@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "comment_metric": "JBJ - min Jacobian By max Jacobian, IGE - Inverse Gradient Error, ICN - Condition Number"
+  },
+  "data": {"class": "A", "tag": "output", "sub_actions": [
+    {"class": "A", "tag": "mesh", "sub_actions": [
+      {"class": "FR", "tag": "elements", "input_path": "gmsh/gmsh.log", "value_type": "int",
+        "pattern": "Total:.*((?<=and)[\\s0-9]*(?=elements))"},
+      {"class": "FR", "tag": "nodes", "input_path": "gmsh/gmsh.log", "value_type": "int",
+        "pattern": "Total:.*((?<=:)[\\s0-9]*(?=nodes))"},
+      {"class": "FR", "tag": "blocks", "input_path": "gmsh/gmsh.log", "value_type": "int",
+        "pattern": "number of blocks:.*((?<=:)[\\s0-9]*(?=))"},
+      {"class": "FR", "tag": "volumes", "input_path": "gmsh/gmsh.log", "value_type": "int",
+        "pattern": "n_volumes:.*((?<=:)[\\s0-9]*(?=))"},
+      {"class": "A", "tag": "jacobian", "sub_actions": [
+        {"class": "A", "tag": "min", "sub_actions": [
+          {"class": "FR", "tag": "min", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ .*((?<==)[\\s0-9.e+-]*(?=,))", "sub_actions": [
+            {"class": "FE", "tag": "constraint", "equation": "$..~~$ is not None and $..~~$ > 0"}]},
+          {"class": "FR", "tag": "avg", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ .*((?<=,)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "max", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ .*((?<=,)[\\s0-9.e+-]*(?=\\())"}]}]},
+      {"class": "A", "tag": "metric", "sub_actions": [
+        {"class": "A", "tag": "ige", "sub_actions": [
+          {"class": "FR", "tag": "min", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: IGE .*((?<==)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "avg", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: IGE .*((?<=,)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "max", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: IGE .*((?<=,)[\\s0-9.e+-]*(?=\\())"}]},
+        {"class": "A", "tag": "icn", "sub_actions": [
+          {"class": "FR", "tag": "min", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: ICN .*((?<==)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "avg", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: ICN .*((?<=,)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "max", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: ICN .*((?<=,)[\\s0-9.e+-]*(?=\\())"}]},
+        {"class": "A", "tag": "jbj", "sub_actions": [
+          {"class": "FR", "tag": "min", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ/maxJ .*((?<==)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "avg", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ/maxJ .*((?<=,)[\\s0-9.e+-]*(?=,))"},
+          {"class": "FR", "tag": "max", "input_path": "gmsh/gmsh.log", "value_type": "float",
+            "pattern": "Info: minJ/maxJ .*((?<=,)[\\s0-9.e+-]*(?=\\())"}]}]}]},
+    {"class": "A", "tag": "time", "sub_actions": [
+      {"class": "FR", "tag": "transform", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.block.block.transform.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "register", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.block.block.register.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "boolean", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.boolean.boolean.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "synchronize", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.registry.synchronize.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "structure", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.structure.structure.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "quadrate", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.quadrate.quadrate.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "smooth", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.smooth.smooth.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "size", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.size.size.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "pre_unregister", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.block.block.pre_unregister -((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "zone", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.zone.zone.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "unregister", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.block.block.unregister -((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "generate", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh.generate.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "optimize", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.optimize.optimize.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "refine", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh_scripts.refine.refine.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FR", "tag": "write", "input_path": "gmsh/gmsh.log", "value_type": "float",
+        "pattern": "gmsh.write.*-((?<=-)[\\s0-9.e+-]*(?=s))"},
+      {"class": "FE", "tag": "total", "equation": "sum([$..~~.transform$, $..~~.register$, $..~~.boolean$, $..~~.synchronize$, $..~~.structure$, $..~~.quadrate$, $..~~.smooth$, $..~~.size$, $..~~.pre_unregister$, $..~~.zone$, $..~~.unregister$, $..~~.generate$, $..~~.optimize$, $..~~.refine$, $..~~.write$])"}]}]}
+}

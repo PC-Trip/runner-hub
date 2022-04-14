@@ -1,0 +1,1 @@
+docker stack deploy --compose-file docker-compose.fixed.grid.yml tenex_chamber_fixed_grid

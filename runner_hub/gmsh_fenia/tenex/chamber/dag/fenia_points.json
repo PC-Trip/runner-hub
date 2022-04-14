@@ -1,0 +1,12 @@
+{
+  "metadata": {},
+  "data": {
+    "class": "P",
+    "subprocess_kwargs": {
+      "args": ["timeFieldsWrite"],
+      "cwd": "fenia",
+      "stdout": "fenia/points.out",
+      "stderr": "fenia/points.err"
+    }  
+  }
+}
