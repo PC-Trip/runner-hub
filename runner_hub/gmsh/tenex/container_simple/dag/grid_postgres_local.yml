@@ -1,0 +1,28 @@
+# samplers https://optuna.readthedocs.io/en/stable/reference/samplers.html,
+# pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
+data:
+  class: Optuna
+  n_trials: 1
+  work_path: work
+  storage: postgresql+psycopg2://ibrae:1234@localhost:54321/ibraedb
+  study: container_simple_postgres_local
+  copies: [gmsh]
+  sampler: GridSampler
+  sampler_kwargs:
+    search_space:
+      ~~.gmsh.input.algorithm.2d: [2, 6]
+      ~~.gmsh.input.algorithm.3d: [1, 4]
+      ~~.gmsh.input.size.factor: [0.8, 1.3]
+      ~~.gmsh.input.size.min: [0.1, 0.5]
+      ~~.gmsh.input.size.max: [1.0, 5.0]
+      ~~.gmsh.input.size.curvature: [30, 50]
+      ~~.gmsh.input.size.boundary: [1, 2]
+      ~~.gmsh.input.size.cast_iron: [0.1, 0.2]
+      ~~.gmsh.input.size.filling: [0.1, 0.2]
+  pruner: NopPruner
+  pruner_kwargs: ~
+  sub_actions: [/gmsh.yml]
+  objectives:
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+  constraints:
+    - ~~.output.mesh.jacobian.min.min.constraint
