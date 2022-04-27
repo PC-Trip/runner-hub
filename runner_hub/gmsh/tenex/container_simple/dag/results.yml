@@ -6,6 +6,12 @@ data:
   study: container_simple
   copies: [gmsh]
   do_optimize: No
+  do_plot_history: Yes
+  do_plot_slice: Yes
+  do_plot_contour: Yes
+  do_plot_parallel: Yes
+  do_plot_edf: Yes
+  do_plot_importance: Yes
   sub_actions: [/gmsh.yml]
   objectives:
     ~~.gmsh.output.mesh.metric.ige.min: maximize
