@@ -7,7 +7,7 @@ services:
       - .env
     volumes:
       - tenex_container_simple:/app
-    command: [ "random_env.json" ]
+    command: [ "random_env.yml" ]
     deploy:
       mode: replicated
       replicas: 2
@@ -15,10 +15,10 @@ services:
         max_replicas_per_node: 1
       resources:
         limits:
-          cpus: '1.0'
+          cpus: "1.0"
           memory: 8g
         reservations:
-          cpus: '1.0'
+          cpus: "1.0"
           memory: 2g
 
 volumes:

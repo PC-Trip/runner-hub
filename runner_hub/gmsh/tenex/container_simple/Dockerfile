@@ -23,4 +23,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 WORKDIR /app/dag
 ENTRYPOINT ["python", "-m", "runner"]
-CMD ["random_env.yaml"]
+CMD ["random_env.yml"]

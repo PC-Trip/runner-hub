@@ -3,7 +3,7 @@ data:
   tag: run
   subprocess_kwargs: 
     args:
-      - D:\runner-hub\venv\Scripts\python.exe
+      - python
       - -m
       - gmsh_scripts
       - container.json
