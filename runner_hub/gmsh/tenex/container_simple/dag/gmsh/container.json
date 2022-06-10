@@ -4,13 +4,13 @@
       "factory": "occ",
       "log_level": "DEBUG",
       "options": {
-        "Mesh.Algorithm": 5,
-        "Mesh.Algorithm3D": 9,
-        "Mesh.MeshSizeFactor": 0.7691792024925214,
-        "Mesh.MeshSizeMin": 0.30548010263810743,
-        "Mesh.MeshSizeMax": 1.1289561506226673,
+        "Mesh.Algorithm": 2,
+        "Mesh.Algorithm3D": 7,
+        "Mesh.MeshSizeFactor": 1.1800375344591525,
+        "Mesh.MeshSizeMin": 0.5117156191610079,
+        "Mesh.MeshSizeMax": 8.855401121335511,
         "Mesh.MeshSizeExtendFromBoundary": 1,
-        "Mesh.MeshSizeFromCurvature": 169.8358896164419
+        "Mesh.MeshSizeFromCurvature": 51.41982810228231
       }
     }
   },

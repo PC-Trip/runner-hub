@@ -1,0 +1,13 @@
+data:
+  class: Optuna
+  copies: [gmsh]
+  sampler: RandomSampler
+  sampler_kwargs:
+    seed: ~
+  pruner: NopPruner
+  pruner_kwargs:
+  sub_actions: [/gmsh.yml]
+  objectives:
+    ~~.gmsh.output.mesh.metric.ige.min: maximize
+  constraints:
+    - ~~.output.mesh.jacobian.min.min.constraint

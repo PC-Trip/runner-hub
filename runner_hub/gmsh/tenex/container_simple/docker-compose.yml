@@ -1,10 +1,13 @@
 version: "3.8"
 services:
-  opt:
+  app:
     image: 10.254.55.75/tenex_container_simple
     build: .
+    env_file:
+      - .env
     volumes:
-      - tenex:/opt/gmsh/input/tenex/container_simple/opt
+      - tenex_container_simple:/app
+    command: [ "random_env.json" ]
     deploy:
       mode: replicated
       replicas: 2
@@ -19,5 +22,4 @@ services:
           memory: 2g
 
 volumes:
-  tenex:
-
+  tenex_container_simple:

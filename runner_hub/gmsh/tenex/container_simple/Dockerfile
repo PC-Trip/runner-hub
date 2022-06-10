@@ -18,10 +18,9 @@ RUN apt-get update && apt-get install -y \
     python-is-python3 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/romanzes637/gmsh_scripts.git /opt/gmsh/
-WORKDIR /opt/gmsh
-RUN pip3 install --no-cache-dir -r requirements_ml.txt 
-RUN pip3 install --no-cache-dir -r requirements_postgres.txt 
-
-WORKDIR /opt/gmsh/input/tenex/container_simple
-CMD ["python3", "/opt/gmsh/ml.py", "opt.json"]
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app/dag
+ENTRYPOINT ["python", "-m", "runner"]
+CMD ["random_env.yaml"]

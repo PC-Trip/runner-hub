@@ -2,8 +2,8 @@ data:
   class: P
   tag: run
   subprocess_kwargs: 
-    args: 
-      - python
+    args:
+      - D:\runner-hub\venv\Scripts\python.exe
       - -m
       - gmsh_scripts
       - container.json

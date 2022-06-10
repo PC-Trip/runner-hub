@@ -485,10 +485,10 @@ def get_data(input_path, fixed=None):
     print(f'{len(df)} completed trials')
     df = df[df["gmsh.input.geometry.container.number"] == 40]
     # df = df[df["gmsh.input.geometry.container.per_borehole"] == 5]
-    df = df[df["values_2"] > 110]
-    df = df[df["values_2"] < 2000]
+    df = df[df["fenia.output.heat.temperature.max"] > 110]
+    df = df[df["fenia.output.heat.temperature.max"] < 2000]
     df = df[df['fenia.input.heat.property.filling.source.value'] == 1000]
-    df = df[df["gmsh.input.geometry.ebs.dh"] <= 2.5]
+    # df = df[df["gmsh.input.geometry.ebs.dh"] <= 2.5]
     print(f'{len(df)} clean trials')
     for k, v in fixed.items():
         df = df[df[k] == v]
@@ -528,7 +528,7 @@ def get_data(input_path, fixed=None):
                              + df['fenia.output.heat.volume.cast_iron'] \
                              + 3 * s * df['gmsh.input.geometry.rock.dz'] \
                              + s * df['gmsh.input.geometry.borehole.length']
-    df = df[df["volume.excavated"] < 1e6]
+    # df = df[df["volume.excavated"] < 1e6]
     return df
 
 
@@ -545,17 +545,18 @@ def plot_t(input_path):
             'gmsh.input.geometry.ebs.dh',
             'gmsh.input.geometry.ebs.dr',
             'gmsh.input.geometry.borehole.dx',
-            'gmsh.input.geometry.rock.dz',
-            'gmsh.input.geometry.rock.dnz',
-            'gmsh.input.geometry.rock.dx',
-            'gmsh.input.geometry.rock.dy',
-            'gmsh.input.size.rock',
-            'gmsh.input.size.factor',
-            'fenia.output.heat.volume.filling',
-            'fenia.output.heat.volume.ebs',
-            'fenia.output.heat.volume.rock',
-            'fenia.output.heat.volume.cast_iron',
-            'volume.excavated',
+            'gmsh.input.geometry.borehole.angle',
+            # 'gmsh.input.geometry.rock.dz',
+            # 'gmsh.input.geometry.rock.dnz',
+            # 'gmsh.input.geometry.rock.dx',
+            # 'gmsh.input.geometry.rock.dy',
+            # 'gmsh.input.size.rock',
+            # 'gmsh.input.size.factor',
+            # 'fenia.output.heat.volume.filling',
+            # 'fenia.output.heat.volume.ebs',
+            # 'fenia.output.heat.volume.rock',
+            # 'fenia.output.heat.volume.cast_iron',
+            # 'volume.excavated',
             'gmsh.input.geometry.container.per_borehole',
             # 'values_0',
             # 'values_1'
@@ -573,7 +574,8 @@ def plot_t(input_path):
             'gmsh.input.geometry.ebs.dh',
             'gmsh.input.geometry.ebs.dr',
             'gmsh.input.geometry.borehole.dx',
-            'gmsh.input.geometry.rock.dz',
+            'gmsh.input.geometry.borehole.angle',
+            # 'gmsh.input.geometry.rock.dz',
             # 'gmsh.input.geometry.rock.dnz',
             # 'gmsh.input.geometry.rock.dx',
             # 'gmsh.input.geometry.rock.dy',
@@ -583,7 +585,7 @@ def plot_t(input_path):
             # 'fenia.output.heat.volume.ebs',
             # 'fenia.output.heat.volume.rock',
             # 'fenia.output.heat.volume.cast_iron',
-            'volume.excavated',
+            # 'volume.excavated',
             # 'values_0',
             # 'values_1'
         ],
@@ -617,8 +619,8 @@ if __name__ == '__main__':
     parser.add_argument('input_path', help='input path')
     a = vars(parser.parse_args())  # arguments
     # plot_time(**a)
-    plot_tri(**a)
+    # plot_tri(**a)
     # plot_slice(**a)
     # plot_tsne(**a)
     # plot_tv(**a)
-    # plot_t(**a)
+    plot_t(**a)

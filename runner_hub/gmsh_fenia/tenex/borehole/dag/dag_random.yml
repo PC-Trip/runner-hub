@@ -2,10 +2,6 @@
 # Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
 data:
   class: Optuna
-  n_trials: 2
-  work_path: work
-  storage: sqlite:///work.db
-  study: tenex_borehole
   copies: [gmsh, fenia]
   sampler: RandomSampler
   sampler_kwargs:

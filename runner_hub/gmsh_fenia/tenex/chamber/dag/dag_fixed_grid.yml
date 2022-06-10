@@ -2,15 +2,7 @@
 # Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
 data:
   class: Optuna
-  n_trials: 1
-  work_path: work
-  storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
-#  storage: sqlite:///work.db
-  study: tenex_chamber_1
   copies: [ gmsh, fenia ]
-  do_delete_study: No
-  do_optimize: Yes
-  do_clean_trial: Yes
   sampler: PartialFixedSampler
   sampler_kwargs:
     fixed_params:

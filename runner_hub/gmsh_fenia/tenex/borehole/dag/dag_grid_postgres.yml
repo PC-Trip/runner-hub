@@ -2,14 +2,8 @@
 # Pruners https://optuna.readthedocs.io/en/stable/reference/pruners.html
 data:
   class: Optuna
-  n_trials: 1
-  work_path: work
-  storage: postgresql+psycopg2://ibrae:1234@10.254.55.75:5432/ibraedb
   study: tenex_borehole_1
   copies: [gmsh, fenia]
-  do_delete_study: false
-  do_optimize: true
-  do_clean_trial: true
   sampler: GridSampler
   sampler_kwargs:
     search_space:
